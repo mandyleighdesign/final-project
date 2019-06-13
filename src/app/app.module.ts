@@ -11,8 +11,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
-
 import { DataService } from './data.service';
+import { EarthComponent } from './earth/earth.component';
 
 
 const appRoutes: Routes = [
@@ -30,7 +30,8 @@ const appRoutes: Routes = [
     FavoritesComponent,
     HomeComponent,
     NavComponent,
-    FooterComponent, 
+    FooterComponent,
+    EarthComponent, 
   ],
   imports: [
     BrowserModule,

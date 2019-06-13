@@ -115,16 +115,9 @@ input[type=text] {
     -webkit-transition: width 0.4s ease-out-in;
     transition: width 0.4s ease-out-in;
   }
+  
+  
 
-  .genreFilter {
-    background-color: black;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #eeeeee;
-    font-size: 1.1rem;
-    border: 2px solid #eeeeee;
-    padding: 5px;
-    border-radius: 2px;
-  }
 
   @media only screen and (min-width: 1025px) {
     .section1 {
@@ -142,7 +135,11 @@ input[type=text] {
     }
 
     input[type=text] {
-        width: 215px;
-        font-size: 1.5rem;
+      width: 215px;
+      font-size: 1.5rem;
       }
+
+
   }
+
+
