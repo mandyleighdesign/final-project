@@ -1,38 +1,108 @@
-.earth {
-  width: 500px;
-  height: 500px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  right: 0;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 50%;
-  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+.container {
+  display: inline-block;
+  cursor: pointer;
 }
 
-.earth:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  box-shadow: -20px -20px 50px 2px #000 inset;
-  border-radius: 50%;
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
 }
 
-.earth > div {
-  width: 200%;
-  height: 100%;
-  animation: spin 30s linear alternate infinite;
-  background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTQ1MTkzNDhf?inline=1);
-  /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
-  background-size: cover;
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
 }
-@keyframes spin {
-  to {
-    transform: translateX(-50%);
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+  
+@media only screen and (min-width: 768px) {
+  .earth {
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+  }
+  
+  .earth:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -20px -20px 50px 2px #000 inset;
+    border-radius: 50%;
+  }
+  
+  .earth > div {
+    width: 200%;
+    height: 100%;
+    animation: spin 30s linear alternate infinite;
+    background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTQ1MTkzNDhf?inline=1);
+    /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
+    background-size: cover;
+  }
+  @keyframes spin {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+}
+
+@media only screen and (min-width: 950px) {
+  .earth {
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+  }
+  
+  .earth:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -20px -20px 50px 2px #000 inset;
+    border-radius: 50%;
+  }
+  
+  .earth > div {
+    width: 200%;
+    height: 100%;
+    animation: spin 30s linear alternate infinite;
+    background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTQ1MTkzNDhf?inline=1);
+    /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
+    background-size: cover;
+  }
+  @keyframes spin {
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
