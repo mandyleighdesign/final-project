@@ -1,18 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
 import { AgmCoreModule } from '@agm/core';
 import { RouterModule, Routes } from '@angular/router';
+
+
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { SearchComponent } from './search/search.component';
-import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { DataService } from './data.service';
+import { EarthComponent } from './earth/earth.component';
+
+
+const appRoutes: Routes = [
+  {path: 'home/:page', component: HomeComponent, pathMatch: 'full' },
+  {path: 'favorites', component: FavoritesComponent}, 
+  {path: '', redirectTo: 'home/1', pathMatch: 'full' },
+  {path: '**', redirectTo: 'home/1'}
+];
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -26,12 +40,11 @@ const appRoutes: Routes = [
     AppComponent,
     AboutComponent,
     SearchComponent,
-    LeaderboardComponent,
     FavoritesComponent,
     HomeComponent,
     NavComponent,
-    FooterComponent, 
-  
+    FooterComponent,
+    EarthComponent, 
   ],
   imports: [
     BrowserModule,
@@ -42,8 +55,12 @@ const appRoutes: Routes = [
       apiKey: 'AIzaSyCAdavi0rhuHGX6JZsdsNOjZmw0adYYlzQ',
       libraries: ['places'],
     })
+
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
+
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
