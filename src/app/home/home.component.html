@@ -1,3 +1,33 @@
 <p>
-  home works!
-</p>
+  <nav class="navbar-span">
+    <div class="section1">
+      <a class="navbar-logo" (click)="onClick()" routerLink="\">Earthly</a>
+      <div class="collapse navbar-collapse" id="navbarText">
+          <a id="ui" routerLink="/"><i id="fa-home" class='fas fa-home'></i>Home</a>
+         <a> <button id="ui" routerLink='/favorites'></button>Favorites</a>
+        <!-- <div class="filters-container">
+          <div class="filter-buttons"> -->
+            <!-- <button id="filterbtn" type="button" (click)="onClick()" [routerLink]="['/now-playing-list', 1]">Home</button>
+            <button id="filterbtn" type="button" (click)="onClick()" [routerLink]="['/popular-list', 1]">POPULAR</button>
+            <button id="filterbtn" type="button" (click)="onClick()" [routerLink]="['/top-rated-list', 1]">TOP RATED</button> -->
+          <!-- </div> -->
+        </div>
+      </div>
+      <!-- <div class="nav-item">
+        <select class="genreFilter" (change)="onChange($event)" [(ngModel)]="genreId">
+          <option value="0" disabled>GENRES</option>
+          <option name="genres" *ngFor="let genre of genreList" [value]="genre.id">{{genre.name}}</option>
+        </select>
+      </div>
+    </div>
+    <form name="userIcons" id="userIcons">
+      <span *ngIf="main"><input name="search" type="text" placeholder="Search" [(ngModel)]="movieString"
+          (change)='searchMovie()' /></span>
+      <span *ngIf="!main"></span>
+      <button id="ui" type="toggle" (click)="toggleSearchInput()"><i class="fa fa-search"></i></button>
+      <a id="ui" routerLink="/"><i id="fa-home" class='fas fa-home'></i></a>
+      <button id="ui" routerLink='/watch-list-page'><i class='fas fa-heart'></i></button>
+      <button id="ui"><i class='fas fa-user-alt'></i></button>
+    </form>
+    <form *ngIf="!main"></form>
+  </nav> -->
