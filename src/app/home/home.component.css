@@ -128,17 +128,7 @@ input[type=text] {
 
   @media only screen and (min-width: 1025px) {
     .section1 {
-        width: 70%;
-    }
-
-    .filters-container { 
-        width: 460px;
-    }
-
-    #filterbtn {
-        margin: 0px 20px;
-        color:#eeeeee;
-        font-size: 1.5rem;
+        width: 370%;
     }
 
     #userIcons {
@@ -154,10 +144,5 @@ input[type=text] {
     input[type=text] {
         width: 215px;
         font-size: 1.5rem;
-      }
-
-      .genreFilter {
-        font-size: 1.5rem;
-        padding: 5px 20px;
       }
   }
