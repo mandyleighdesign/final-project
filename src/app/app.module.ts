@@ -21,16 +21,12 @@ import { DataService } from './data.service';
 import { EarthComponent } from './earth/earth.component';
 
 
-const appRoutes: Routes = [
-  {path: 'home/:page', component: HomeComponent, pathMatch: 'full' },
-  {path: 'favorites', component: FavoritesComponent}, 
-  {path: '', redirectTo: 'home/1', pathMatch: 'full' },
-  {path: '**', redirectTo: 'home/1'}
-];
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
-  {path: 'search', component: SearchComponent}
+  {path: 'search', component: SearchComponent},
+  {path: 'favorites', component: FavoritesComponent}, 
+ 
 
 
 ]
@@ -48,6 +44,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
@@ -56,8 +53,6 @@ const appRoutes: Routes = [
       libraries: ['places'],
     })
 
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes)
 
   ],
   providers: [DataService],
