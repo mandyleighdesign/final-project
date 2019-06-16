@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Place } from './user.model';
+import { User } from './user.model';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -21,8 +21,8 @@ export class DataService {
 
   //earth 911
 
-  getPlaces({lat, lng}) {
-    return this._http.get<Place[]>(`${this.baseApiUrl}?api_key=${this.apiKey}&latitude=${lat}&longitude=${lng}`);
+  getUsers({lat, lng}) {
+    return this._http.get<User[]>(`${this.baseApiUrl}?api_key=${this.apiKey}&latitude=${lat}&longitude=${lng}`);
   }
 
 }

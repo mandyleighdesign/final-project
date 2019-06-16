@@ -17,6 +17,7 @@ div p {
     margin: 0;
    
 }
+
 p {
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -24,7 +25,9 @@ p {
     color: lightgreen;
     padding-left: 90px;
     width: 43%;
+
 }
+
 @media only screen and (max-width: 480px) {
     div p {
         margin-top: 10px;
