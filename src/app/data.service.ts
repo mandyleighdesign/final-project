@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from './user.model';
+import { Place } from './place.model';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -10,7 +10,19 @@ export class DataService {
 
   constructor(private _http: HttpClient) { }
 
-  apiUrl = "https://jsonplaceholder.typicode.com/users";
+  baseApiUrl = "https://api.earth911.com/earth911.searchMaterialsByProximity";
+  apiKey = "6b3a1bd08e2cb59e";
 
-  getUsers() { return this._http.get<User[]>(this.apiUrl); }
+  //google location search
+
+  getCoordinates(city) {
+    return this._http.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyBftPuIY280Sz5nvoGn1zMJjFKZlxxwJZs`);
+  }
+
+  //earth 911
+
+  getPlaces({lat, lng}) {
+    return this._http.get<Place[]>(`${this.baseApiUrl}?api_key=${this.apiKey}&latitude=${lat}&longitude=${lng}`);
+  }
+
 }
