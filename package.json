@@ -11,7 +11,12 @@
   },
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@angular/animations": "^7.2.15",
+=======
+    "@agm/core": "^1.0.0-beta.6",
+    "@angular/animations": "~7.2.0",
+>>>>>>> d530c5be1f2569230b08975e203646b22c3ce02f
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~7.2.0",

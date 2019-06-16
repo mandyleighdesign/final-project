@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -26,8 +28,10 @@ import { ToastrModule } from 'ngx-toastr';
 // import { QuizService } from './quiz.service';
 
 
+
 const appRoutes: Routes = [
-  {path: 'home/:page', component: HomeComponent, pathMatch: 'full' },
+  {path: '', component: HomeComponent, pathMatch: 'full'},
+  {path: 'search', component: SearchComponent},
   {path: 'favorites', component: FavoritesComponent}, 
   // {path: '', redirectTo: 'home/1', pathMatch: 'full' },
   // {path: '**', redirectTo: 'home/1'},
@@ -35,6 +39,8 @@ const appRoutes: Routes = [
 ];
 //   { path: '', redirectTo: '/question/0', pathMatch: 'prefix' }
 // ];
+
+
 
 @NgModule({
   declarations: [
@@ -51,6 +57,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
