@@ -2,7 +2,6 @@
   display: inline-block;
   cursor: pointer;
 }
-
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
@@ -10,19 +9,15 @@
   margin: 6px 0;
   transition: 0.4s;
 }
-
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px);
 }
-
 .change .bar2 {opacity: 0;}
-
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
-
   
 @media only screen and (min-width: 768px) {
   .earth {
@@ -54,7 +49,7 @@
     width: 200%;
     height: 100%;
     animation: spin 30s linear alternate infinite;
-    background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTQ1MTkzNDhf?inline=1);
+    background: url(https://web.opendrive.com/api/v1/download/file/NDhfMjY5NTE1MTBfTEN6VHg);
     /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
     background-size: cover;
   }
@@ -65,7 +60,6 @@
   }
   
 }
-
 @media only screen and (min-width: 950px) {
   .earth {
     width: 500px;
@@ -96,7 +90,7 @@
     width: 200%;
     height: 100%;
     animation: spin 30s linear alternate infinite;
-    background: url(https://web.opendrive.com/api/v1/download/file.json/NTlfMTQ1MTkzNDhf?inline=1);
+    background: url(https://web.opendrive.com/api/v1/download/file/NDhfMjY5NTE1MTBfTEN6VHg);
     /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
     background-size: cover;
   }
