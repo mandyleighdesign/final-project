@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Place } from './place.model';
+import { Place } from './user.model';
 import { DataService } from './data.service';
 
 @Component({
@@ -9,11 +9,12 @@ import { DataService } from './data.service';
 })
 export class AppComponent implements OnInit {
   title = 'final-project';
-  users$: Place[];
+  places: Place[];
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) {
+  }
 
   ngOnInit() { 
-    return this.dataService.getPlaces().subscribe(data => this.users$ = data); 
+    return this.dataService.getPlaces().subscribe(data => this.places = data); 
   }
 }
