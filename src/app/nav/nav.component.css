@@ -68,8 +68,7 @@ i {
     color: #ed361a;
 }
 
-  
-  @media only screen and (min-width: 480px) {
+@media only screen and (min-width: 768px) {
     .section1 {
         width: 370%;
     }

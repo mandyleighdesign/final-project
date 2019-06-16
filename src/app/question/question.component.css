@@ -1,0 +1,8 @@
+form, input {
+    margin: 2.3em;
+}
+input:checked {
+    color:black;
+    opacity:1;
+    position:relative;
+}
