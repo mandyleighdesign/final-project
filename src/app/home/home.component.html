@@ -1,3 +1,4 @@
+
 <div>    
     <p>RETHINK THE </p>
 </div>
@@ -7,3 +8,26 @@
 </div>
 
 <p>Find A Recycling Center Near You</p> 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div>
+        <form (submit)="findMaterials()">
+            <input required name="city" [(ngModel)]="city" />
+            <select required name="selectedMaterial" [(ngModel)]="selectedMaterial">
+                <option value="bottles">bottles</option>
+                <option value="paper">paper</option>
+                <option value="magazines">magazines</option>
+                <option value="plastic">plastic</option>
+            </select>
+            <button>Find Materials</button>
+        </form>
+    </div>
+</body>
+</html>
