@@ -2,9 +2,11 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { ModalDirective } from 'node_modules/ngx-bootstrap';
+// import { ModalDirective } from 'node_modules/ngx-bootstrap';
 import { QuestionClass } from './quiz-class';
 import { ToastrService } from 'ngx-toastr';
+// import { ModalService } from '../_services';
+
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
@@ -16,8 +18,8 @@ export class QuizComponent implements OnInit {
 	totalAnswered: number = 0;
 	rightAnswer: number;
 	questionObj = new QuestionClass();
-	@ViewChild('submitModal') submitModal: ModalDirective;
-	@ViewChild('answerModal') answerModal : ModalDirective;
+	// @ViewChild('submitModal') submitModal: ModalDirective;
+	// @ViewChild('answerModal') answerModal : ModalDirective;
 	@ViewChild('questionForm') questionForm: any;
   @ViewChild('questionTest') questionTest : any;
   
@@ -63,12 +65,12 @@ export class QuizComponent implements OnInit {
 				this.totalAnswered++;
 				if (this.asks[i]["selected"] == this.asks[i]["answer"]) {
 					this.rightAnswer++;
-				}
+				} 
 			}
 
 		}
 		
-		this.submitModal.show();
+		// this.submitModal.show();
 		// this.answerModal.show();
 
 	}
@@ -100,9 +102,15 @@ export class QuizComponent implements OnInit {
 
 	// }
 	checkAnswers(){
-		this.submitModal.hide();
-		this.answerModal.show();
+		
+		// this.submitModal.hide();
+		// this.answerModal.show();
 	}
+
+	// open() {
+	// 	const modalRef = this.modalService.open(QuizComponent);
+		// modalRef.componentInstance.name = 'World';
+
   ngOnInit() {
   }
 

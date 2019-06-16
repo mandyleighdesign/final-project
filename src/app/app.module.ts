@@ -27,8 +27,8 @@ const appRoutes: Routes = [
   {path: 'favorites', component: FavoritesComponent}, 
   {path: '', redirectTo: 'home/1', pathMatch: 'full' },
   {path: '**', redirectTo: 'home/1'},
-  { path: 'question/:questionId', component: QuizComponent },
-  {path: '', redirectTo: '/question/0', pathMatch: 'prefix' }
+  { path: 'quiz/:quizId', component: QuizComponent },
+  {path: '', redirectTo: '/quiz/0', pathMatch: 'prefix' }
 ];
 
 @NgModule({
