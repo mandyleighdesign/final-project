@@ -17,7 +17,6 @@ export class QuestionComponent implements OnInit {
 	rightAnswer: number;
 	questionObj = new QuestionClass();
 	@ViewChild('submitModal') submitModal: ModalDirective;
-	@ViewChild('addQuestionModal') addQuestionModal : ModalDirective;
 	@ViewChild('answerModal') answerModal : ModalDirective;
 	@ViewChild('questionForm') questionForm: any;
 	@ViewChild('questionTest') questionTest : any;
@@ -28,7 +27,7 @@ export class QuestionComponent implements OnInit {
 
   answerArray = [];
 
-	allQuestions: any = [{
+	asks: any = [{
 		"id": 1,
 		"question": "Which item does NOT belong in the recycling bin?",
 		"a": "Plastic Milk Jug",
@@ -61,10 +60,10 @@ export class QuestionComponent implements OnInit {
 	submitTest() {
 		this.rightAnswer = 0;
 		this.totalAnswered = 0;
-		for (let i = 0; i < this.allQuestions.length; i++) {
-			if ("selected" in this.allQuestions[i] && (this.allQuestions[i]["selected"] != null)) {
+		for (let i = 0; i < this.asks.length; i++) {
+			if ("selected" in this.asks[i] && (this.asks[i]["selected"] != null)) {
 				this.totalAnswered++;
-				if (this.allQuestions[i]["selected"] == this.allQuestions[i]["answer"]) {
+				if (this.asks[i]["selected"] == this.asks[i]["answer"]) {
 					this.rightAnswer++;
 				}
 			}
@@ -77,9 +76,9 @@ export class QuestionComponent implements OnInit {
 	}
 
 	startQuiz() {
-		for (let i = 0; i < this.allQuestions.length; i++) {
-			if ("selected" in this.allQuestions[i]) {
-				delete this.allQuestions[i]["selected"];
+		for (let i = 0; i < this.asks.length; i++) {
+			if ("selected" in this.asks[i]) {
+				delete this.asks[i]["selected"];
 			}
 
 		}
