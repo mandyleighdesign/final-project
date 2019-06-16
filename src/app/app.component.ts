@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './user.model';
 import { DataService } from './data.service';
-import { QuizService } from './quiz.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'final-project';
   users$: User[];
 
-  constructor(private dataService: DataService, public quiz: QuizService) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() { 
     return this.dataService.getUsers().subscribe(data => this.users$ = data); 
