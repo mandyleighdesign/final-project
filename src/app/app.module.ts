@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { AgmCoreModule } from '@agm/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -15,12 +18,15 @@ import { DataService } from './data.service';
 import { EarthComponent } from './earth/earth.component';
 
 
+
 const appRoutes: Routes = [
-  {path: 'home/:page', component: HomeComponent, pathMatch: 'full' },
+  {path: '', component: HomeComponent, pathMatch: 'full'},
+  {path: 'search', component: SearchComponent},
   {path: 'favorites', component: FavoritesComponent}, 
-  {path: '', redirectTo: 'home/1', pathMatch: 'full' },
-  {path: '**', redirectTo: 'home/1'}
-];
+ 
+
+
+]
 
 @NgModule({
   declarations: [
@@ -35,10 +41,16 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCAdavi0rhuHGX6JZsdsNOjZmw0adYYlzQ',
+      libraries: ['places'],
+    })
+
+
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
