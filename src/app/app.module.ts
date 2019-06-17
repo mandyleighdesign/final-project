@@ -16,10 +16,8 @@ import { EarthComponent } from './earth/earth.component';
 
 
 const appRoutes: Routes = [
-  {path: 'home/:page', component: HomeComponent, pathMatch: 'full' },
-  {path: 'favorites', component: FavoritesComponent}, 
-  {path: '', redirectTo: 'home/1', pathMatch: 'full' },
-  {path: '**', redirectTo: 'home/1'}
+  {path: '', component: HomeComponent, pathMatch: 'full' },
+  {path: 'favorites', component: FavoritesComponent}
 ];
 
 @NgModule({
