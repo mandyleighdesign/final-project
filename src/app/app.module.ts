@@ -13,11 +13,18 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { DataService } from './data.service';
 import { EarthComponent } from './earth/earth.component';
+import { QuizComponent } from './quiz/quiz.component';
 
+
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { AccordionModule } from 'ngx-bootstrap';
 
 const appRoutes: Routes = [
   {path: 'home/:page', component: HomeComponent, pathMatch: 'full' },
   {path: 'favorites', component: FavoritesComponent}, 
+  {path: 'quiz/:quizId', component: QuizComponent}, 
   {path: '', redirectTo: 'home/1', pathMatch: 'full' },
   {path: '**', redirectTo: 'home/1'}
 ];
@@ -32,12 +39,17 @@ const appRoutes: Routes = [
     NavComponent,
     FooterComponent,
     EarthComponent, 
+    QuizComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ModalModule.forRoot(),
+    AccordionModule.forRoot(),
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [DataService],
