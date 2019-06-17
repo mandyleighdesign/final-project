@@ -1,0 +1,101 @@
+<p>
+  quiz works!
+</p>
+<div class="container">
+    <h3 style="text-align:center" class='title'>
+      How Well Do You Know How to Recycle?
+    </h3>
+    <div class="card" [hidden]="isQuestionCardShow">
+      <div class="card-body">
+          <section class="image">
+        <img src="https://media.nbcwashington.com/images/1200*900/GenericRecycleSymbol.jpg" width="750" height="600">
+      </section>
+          <div class="button_start">
+            <button class="button_start_quiz" style="margin-top: 24px;" (click)="startQuiz()">
+              Start Quiz </button>
+        </div>
+      </div>
+    </div>
+    <div class="card" [hidden]="!isQuestionCardShow">
+      <div class="card-body">
+        <form #questionTest="ngForm" novalidate>
+          <div *ngFor="let ask of asks">
+            <div>{{ask.question}}</div>
+            <div class="full_questionaire">
+              <label class="options">Choose Correct Option</label>
+              <div class="questionaire_questions">
+                <div class="all_the_options">
+                  <input class="form-input" type="radio" name="{{ask.id}}" value="a" [(ngModel)]="ask.selected">
+                  <label class="form-label">a) {{ask.a}} </label>
+                </div>
+                <div class="all_the_options">
+                  <input class="form-nput" type="radio" name="{{ask.id}}" value="b" [(ngModel)]="ask.selected">
+                  <label class="form-label">b) {{ask.b}}</label>
+                </div>
+  
+                <div class="all_the_options">
+                  <input class="form-input" type="radio" name="{{ask.id}}" value="c" [(ngModel)]="ask.selected">
+                  <label class="form-label">c) {{ask.c}}</label>
+                </div>
+                <div class="all_the_options">
+                  <input class="form-input" type="radio" name="{{ask.id}}" value="d" [(ngModel)]="ask.selected">
+                  <label class="form-label">d) {{ask.d}}</label>
+                </div>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </form>
+        <div class="selections">
+          <div class="button_click" style="justify-content: center;display: flex;">
+            <button type="button" class="toCancel" (click)="HomePage()" style="margin-right: 30px;">Cancel</button>
+            <button type="button" class="toSubmit" (click)="submitTest()" data-toggle="modal" data-target="#myModal">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- MODAL STARTS HERE: -->
+  
+  <div >
+    aria-hidden="true">
+    <div class="modal fade" id="myModal">
+      <div class="modal-content">
+        <div class="modal-body text-center" style="color: #196f77;">
+          <h4>Total Questions: {{asks.length}} </h4>
+          <h4>Total Answered: {{totalAnswered}}</h4>
+          <h4>Right Answer : {{rightAnswer}}</h4>
+          <div style="justify-content: center;display: flex;">
+            <button type="button" class="toAnswer" (click)="checkAnswers()"data-toggle="modal" data-target="#myModal" id="myModal"style="margin-right: 17px;"> Answers</button>
+          
+          <button type="button" class="toClose" (click)="submitModal.hide()" style="margin-left: 17px;">Close</button>
+        </div>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+  
+  <!-- MODAL CONTINUES: -->
+  <div class="modal fade" [hidden]="!isQuestionCardShow" data-toggle="modal" data-target="#myModal" id="myModal">
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center" style="color: #196f77;">
+          <div *ngFor="let ask of asks" [style.color]="!ask.selected? '#ffc107' : ask.selected == ask.answer ? 'green': 'red'">
+            <div>{{ask.question}}</div>
+            <div>Your Answer: {{ask[ask.selected]}}</div>
+            <div>Right Answer: {{ask.answer}}) {{ask[ask.answer]}}</div>
+            <hr>
+          </div>
+          <button type="button" class="toCloseAll" (click)="answerModal.hide()" style="margin-left: 17px;">Close</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
