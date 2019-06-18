@@ -16,6 +16,12 @@
             <option value="magazines">magazines</option>
             <option value="plastic">plastic</option>
         </select> -->
+        <br>
         <button>Find Locations</button>
     </form>
+
+    <p>{{location}}</p>
+    <div *ngFor="let location of locations">
+        <p>{{ location.description }}</p>
+    </div>
 </div>
