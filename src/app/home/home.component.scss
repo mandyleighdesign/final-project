@@ -10,13 +10,18 @@ div p {
     width: 190%;
 }
 select, button, input {
+<<<<<<< HEAD:src/app/home/home.component.css
     border-radius: 5px;
+=======
+    border-radius: 10px;
+    margin-bottom:2em;
+>>>>>>> f20732683e5c76c5ac2dc0812bb14b54195ceac6:src/app/home/home.component.scss
     width: 200px;
     height: 30px;
     border: none;
     padding-left: 15px;
     display: flex; 
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 .search-form {
     background: #000;
