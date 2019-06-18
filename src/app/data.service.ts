@@ -10,7 +10,7 @@ export class DataService {
 
   constructor(private _http: HttpClient) { }
 
-  baseApiUrl = "https://api.earth911.com/earth911.searchMaterialsByProximity";
+  baseApiUrl = "https://api.earth911.com/earth911.searchLocations";
   apiKey = "6b3a1bd08e2cb59e";
 
   //google location search

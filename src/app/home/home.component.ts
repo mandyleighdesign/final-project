@@ -13,12 +13,22 @@ export class HomeComponent {
   
   constructor(private dataService: DataService) {}
 
+  // findMaterials() {
+  //   this.dataService.getCoordinates(this.city).subscribe(locationData => {
+  //     const latLng = locationData['results'][0].geometry.location;
+  //     this.dataService.getUsers(latLng).subscribe(res => {
+  //       const filteredMaterials = res['result'].filter(m => m.description.toLowerCase().includes(this.selectedMaterial.toLowerCase()));
+  //       console.log('filtered materialsss', filteredMaterials);
+  //     })
+  //   })
+  // }
+
   findMaterials() {
     this.dataService.getCoordinates(this.city).subscribe(locationData => {
       const latLng = locationData['results'][0].geometry.location;
-      this.dataService.getUsers(latLng).subscribe(res => {
-        const filteredMaterials = res['result'].filter(m => m.description.toLowerCase().includes(this.selectedMaterial.toLowerCase()));
-        console.log('filtered materialsss', filteredMaterials);
+      console.log(latLng);
+      this.dataService.getUsers(latLng).subscribe((res: any) => {
+        console.log(res.result);
       })
     })
   }
