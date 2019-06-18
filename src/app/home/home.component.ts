@@ -35,9 +35,7 @@ export class HomeComponent {
         this.locations = res.result;
         console.log(this.locations);
       })
-      
     })
   }
-
 
 }
