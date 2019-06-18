@@ -11,12 +11,13 @@ div p {
 }
 select, button, input {
     border-radius: 10px;
+    margin-bottom:2em;
     width: 200px;
     height: 30px;
     border: none;
     padding-left: 15px;
     display: flex; 
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 .search-form {
     background: #000;
