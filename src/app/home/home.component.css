@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 button {
@@ -73,10 +74,26 @@ h3 {
 
 #future {
   font-size: 80px;
+=======
+div p {
+   
+    color: white;
+    display: flex;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    padding-left: 90px;
+    padding-top: 150px;
+    width: 190%;
+}
+.future {
+    font-size: 100px;
+>>>>>>> 6508d0d93d1a224682e8c8bbf30cda42f65ef3d4
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-left: 90px;
     margin: 0;
+<<<<<<< HEAD
 
   /* padding-top: 5px;
   padding-left: 90px;
@@ -86,6 +103,11 @@ h3 {
 }
 
 
+=======
+   
+}
+
+>>>>>>> 6508d0d93d1a224682e8c8bbf30cda42f65ef3d4
 p {
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -94,6 +116,7 @@ p {
     padding-left: 90px;
     width: 43%;
 
+<<<<<<< HEAD
     
 }
 
@@ -202,3 +225,13 @@ p {
       }
     }
   }
+=======
+}
+
+@media only screen and (max-width: 480px) {
+    div p {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+>>>>>>> 6508d0d93d1a224682e8c8bbf30cda42f65ef3d4
