@@ -1,11 +1,11 @@
 
-<<<<<<< HEAD
 
+  
 
 <h2 id="rethink">RETHINK THE </h2>
 <h1 id="future">FUTURE</h1>
 
-<p>Find A Recycling Center Near You</p> 
+<h3>Find A Recycling Center Near You</h3> 
 
 
 
@@ -20,40 +20,21 @@
             <option value="magazines">magazines</option>
             <option value="plastic">plastic</option>
         </select> -->
+        <br>
         <button>Find Locations</button>
     </form>
-</div>
-=======
-<div>    
-    <p>RETHINK THE </p>
+    <!-- <p></p> -->
+ 
+    <div *ngFor="let location of locations">
+        <p>{{ location.description }}</p>
+        <p> Curbside: {{ location.curbside }}</p>
+        <p> Distance: {{ location.distance }} </p>
+        
 </div>
 
-<div class="future">
-    FUTURE
-</div>
 
-<p>Find A Recycling Center Near You</p> 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <div>
-        <form (submit)="findMaterials()">
-            <input required name="city" [(ngModel)]="city" />
-            <select required name="selectedMaterial" [(ngModel)]="selectedMaterial">
-                <option value="bottles">bottles</option>
-                <option value="paper">paper</option>
-                <option value="magazines">magazines</option>
-                <option value="plastic">plastic</option>
-            </select>
-            <button>Find Materials</button>
-        </form>
-    </div>
-</body>
-</html>
->>>>>>> 6508d0d93d1a224682e8c8bbf30cda42f65ef3d4
+
+
+
+
+

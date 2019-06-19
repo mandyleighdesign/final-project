@@ -1,0 +1,24 @@
+.question-body {
+    h5.title {
+      line-height: 2.0;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin: 100px 0 0.65em 0;
+      font-weight: 500;
+      font-size: 1.75em;
+      
+    }
+    .choices {
+      padding: 1rem;
+     
+    }
+  
+    .choice {
+      cursor: pointer;
+      
+    }
+    li {
+      height: 50px;
+     
+    }
+  }

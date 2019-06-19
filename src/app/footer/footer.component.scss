@@ -1,0 +1,22 @@
+.fixed-footer{
+    width: 100%;
+    position: fixed;        
+    background: black;
+    padding: 10px 0;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.fixed-footer{
+    bottom: 0;
+} 
+
+.container{
+    display: flex;
+    justify-content: center;
+    /* width: 50%;
+    margin: 0 auto; Center the DIV horizontally */
+}
+.container p{
+    line-height: 200px; /* Create scrollbar to test positioning */
+}
