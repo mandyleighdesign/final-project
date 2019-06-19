@@ -9,7 +9,7 @@ body {
 }
 
     .left {
-      transform: translateX(-7rem);
+      transform: translateX(-15rem);
     }
   
     .right {
@@ -23,6 +23,12 @@ body {
       cursor: pointer;
       opacity: .5;
       
+    }
+    .icon-next {
+      margin-left:-35px;
+    }
+    .icon-prev {
+      margin-left:-30px;
     }
     /* .carousel-control-prev {
       margin-left: 20em!important;
