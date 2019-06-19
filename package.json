@@ -21,6 +21,7 @@
     "@angular/router": "~7.2.0",
     "angular-animate": "^1.7.8",
     "core-js": "^2.5.4",
+    "cors": "^2.8.5",
     "ngx-bootstrap": "^2.0.5",
     "ngx-carousels": "0.0.6",
     "node-sass": "^4.12.0",
