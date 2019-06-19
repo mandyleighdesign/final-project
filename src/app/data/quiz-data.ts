@@ -108,7 +108,7 @@ export const QUIZ_DATA = [
       ]
     },
     {
-      'title': 'Six of these are recyclable in the blue cart, which is NOT?',
+      'title': 'Five of these items are recyclable in the blue cart, which is NOT?',
       'drawType': 'list',
       'choices': [
         {
