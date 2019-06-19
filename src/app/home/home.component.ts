@@ -1,5 +1,12 @@
-import { Component } from '@angular/core';
-import {DataService} from '../data.service';
+import { Component, Input } from '@angular/core';
+import { DataService } from '../data.service';
+
+export interface Location {
+  curbside: boolean;
+  description: string;
+  distance: number;
+}
+
 
 @Component({
   selector: 'app-home',
@@ -10,6 +17,7 @@ import {DataService} from '../data.service';
 export class HomeComponent {
   city: String
   selectedMaterial: String
+  location: Location;
   
   constructor(private dataService: DataService) {}
 
@@ -31,5 +39,9 @@ export class HomeComponent {
         console.log(res.result);
       })
     })
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
   }
 }
