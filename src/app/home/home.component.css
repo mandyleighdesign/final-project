@@ -23,25 +23,19 @@ button {
     padding-left: 15px;
   
     
-
+  }
 select, button, input {
-<<<<<<< HEAD
-    border-radius: 10px;
-    margin-bottom:2em;
-=======
 
     border-radius: 5px;
 
     border-radius: 10px;
     margin-bottom:2em;
 
->>>>>>> 12174f2584ac2a73ba0dcdf802bb9c44fab1ea6f
     width: 200px;
     height: 30px;
     border: none;
     padding-left: 15px;
     display: flex; 
-    color:black;
     /* flex-direction: column; */
 
 }
@@ -52,32 +46,18 @@ input, button {
 
 
 .search-form {
+
     background: #000;
     color: #fff;
     display: flex; 
     flex-direction: column;
     padding-left: 90px;
     margin: 20px 0px 40px;
-}
-h3 {
-  animation-duration: 3s;
-  animation-name: slidein;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 
+    
 }
 
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%; 
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
 
 
 #rethink {
@@ -86,18 +66,19 @@ h3 {
   font-size: 25px;
   margin-top: 180px;
   padding-left: 90px;
-  /* width: 43%; */
-
-  /* color: white;
-  padding-left: 90px;
-  padding-top: 220px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+ 
 }
 
-#future {
-  font-size: 80px;
 
-div p {
+p {
+  max-width: 550px;
+  margin: 30px;
+  display: flex;
+  
+  flex-direction: column;
+}
+
+/* div p {
    
     color: white;
     display: flex;
@@ -107,15 +88,13 @@ div p {
     padding-left: 90px;
     padding-top: 150px;
     width: 190%;
-}
-.future {
+} */
+#future {
     font-size: 100px;
-
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-left: 90px;
-    margin: 0;
-
+    padding-left: 86px;
+  
 
   /* padding-top: 5px;
   padding-left: 90px;
@@ -127,9 +106,9 @@ div p {
 
 
    
-}
 
-p {
+
+h3 {
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
@@ -247,7 +226,7 @@ p {
     }
   }
 
-}
+
 
 @media only screen and (max-width: 480px) {
     div p {
