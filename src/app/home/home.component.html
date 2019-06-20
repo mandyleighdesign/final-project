@@ -13,22 +13,18 @@
     <form (submit)="findMaterials()">
         
         <input required name="city" placeholder="Enter City Here" [(ngModel)]="city" />
-        <!-- <h3>Material</h3>
-        <select required name="selectedMaterial" [(ngModel)]="selectedMaterial">
-            <option value="bottles">bottles</option>
-            <option value="paper">paper</option>
-            <option value="magazines">magazines</option>
-            <option value="plastic">plastic</option>
-        </select> -->
+ 
         <br>
         <button>Find Locations</button>
     </form>
-    <!-- <p></p> -->
  
-    <div *ngFor="let location of locations">
-        <p>{{ location.description }}</p>
+     
+    <div class= "results" *ngFor="let location of locations">
+        
+        <p id= "location">{{ location.description }}</p>
         <p> Curbside: {{ location.curbside }}</p>
-        <p> Distance: {{ location.distance }} </p>
+        <p id= "distance"> Distance: {{ location.distance }} </p>
+        <i id="ui" (click)="addFavorite()" i class='fas fa-heart'></i>
         
 </div>
 
