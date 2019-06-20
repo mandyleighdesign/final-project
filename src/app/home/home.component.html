@@ -1,41 +1,28 @@
-
-
-  
-
 <h2 id="rethink">RETHINK THE </h2>
 <h1 id="future">FUTURE</h1>
 
 <h3>Find A Recycling Center Near You</h3> 
 
-
-
 <div class="search-form">
     <form (submit)="findMaterials()">
         
-        <input required name="city" placeholder="Enter City Here" [(ngModel)]="city" />
-        <!-- <h3>Material</h3>
-        <select required name="selectedMaterial" [(ngModel)]="selectedMaterial">
-            <option value="bottles">bottles</option>
-            <option value="paper">paper</option>
-            <option value="magazines">magazines</option>
-            <option value="plastic">plastic</option>
-        </select> -->
+        <input required name="city" placeholder="Search by your location" [(ngModel)]="city" />
         <br>
+        <p>Select a material:</p><select class="select" name="materials" [(ngModel)]="selectedMaterial" (change)="getMaterials()">
+            <option value="1,2">Plastic</option>
+        </select>
+        
         <button>Find Locations</button>
     </form>
-    <!-- <p></p> -->
+
+
  
-    <div *ngFor="let location of locations">
-        <p>{{ location.description }}</p>
-        <!-- <p> Curbside: {{ location.curbside }}</p>
-        <p> Distance: {{ location.distance }} </p> -->
-    </div>
-        
+     
+    <div class= "results" *ngFor="let loc of locations; let i=index">
+    
+        <a href="{{ loc.url }}"><p id= "location">{{ loc.description }}</p></a>
+        <p> Address: {{ loc.address }} {{ loc.city }}</p>
+        <!-- <p id= "distance"> Distance: {{ globalLocations[i].distance }} </p> -->
+        <i id="ui" (click)="addFavorite()" i class='fas fa-heart'></i>
+    </div>    
 </div>
-
-
-
-
-
-
-

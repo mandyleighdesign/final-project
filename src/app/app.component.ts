@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'final-project';
 
  
-  locations$: Location[];
+  location$: Location[];
 
 
   constructor(private dataService: DataService) {

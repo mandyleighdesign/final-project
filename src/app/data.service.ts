@@ -22,7 +22,7 @@ export class DataService {
   //earth 911
 
   getLocations({lat, lng}) {
-    return this._http.get<Location[]>(`${this.baseApiUrl}.searchLocations?api_key=${this.apiKey}&latitude=${lat}&longitude=${lng}&max_results=10`);
+    return this._http.get<Location[]>(`${this.baseApiUrl}.searchLocations?api_key=${this.apiKey}&latitude=${lat}&longitude=${lng}&material_id=5`);
   }
 
   getLocation(locationId) {

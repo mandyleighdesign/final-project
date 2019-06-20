@@ -1,64 +1,57 @@
 
-
+i {
+  size:60px;
+  padding-left: 560px;
+  width: 30%;
+}
 
 button {
   border-radius: 5px;
   width: 100px;
   height: 30px;
   border: none;
-
   padding-left: 15px;
   background-color: lightblue;
-  
-  
-  
 }
-
-
-  input {
+ 
+input {
+    color:black;
+    background-color: white;
     border-radius: 5px;
     width: 120px;
     height: 30px;
     border: none;
     padding-left: 15px;
-  
-    
   }
+
+  input::placeholder { 
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
 select, button, input {
-
     border-radius: 5px;
-
     border-radius: 10px;
     margin-bottom:2em;
-
     width: 200px;
     height: 30px;
     border: none;
     padding-left: 15px;
     display: flex; 
-    /* flex-direction: column; */
-
 }
 
 input, button {
   display: inline;
 }
 
-
 .search-form {
-
     background: #000;
     color: #fff;
     display: flex; 
     flex-direction: column;
     padding-left: 90px;
-    margin: 20px 0px 40px;
- 
-    
+    margin: 20px 0px 40px;  
 }
-
-
-
 
 #rethink {
   color: white;
@@ -66,47 +59,38 @@ input, button {
   font-size: 25px;
   margin-top: 180px;
   padding-left: 90px;
- 
 }
 
+#location {
+  font-size: 23px;
+}
+
+#distance {
+  color: lightblue;
+  padding-left: 430px; 
+}
+
+.results {
+  outline: lightgreen solid 3px;
+  padding: 10px;
+  width: 600px;
+  margin-top: 100px; 
+}
 
 p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   max-width: 550px;
-  margin: 30px;
+  margin: 10px;
   display: flex;
-  
   flex-direction: column;
 }
 
-/* div p {
-   
-    color: white;
-    display: flex;
-    margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 40px;
-    padding-left: 90px;
-    padding-top: 150px;
-    width: 190%;
-} */
 #future {
     font-size: 100px;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-left: 86px;
-  
-
-  /* padding-top: 5px;
-  padding-left: 90px;
-  font-size: 40px;
-  color: white;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
-
-
-
-   
-
 
 h3 {
     color: white;
@@ -114,14 +98,8 @@ h3 {
     font-size: 25px;
     color: lightgreen;
     padding-left: 90px;
-    width: 43%;
-
-
-    
+    width: 43%;   
 }
-
-
-
 
 .container {
     display: inline-block;
@@ -178,6 +156,12 @@ h3 {
       /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
       background-size: cover;
     }
+
+    .select {
+      color: #000;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
     @keyframes spin {
       to {
         transform: translateX(-50%);
@@ -185,6 +169,7 @@ h3 {
     }
     
   }
+
   @media only screen and (min-width: 950px) {
     .earth {
       width: 500px;
@@ -234,4 +219,3 @@ h3 {
         width: 100%;
     }
 }
-
