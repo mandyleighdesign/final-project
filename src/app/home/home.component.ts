@@ -1,17 +1,30 @@
-import { Component } from '@angular/core';
-import {DataService} from '../data.service';
+import { Component, Input } from '@angular/core';
+import { DataService } from '../data.service';
+
+export interface Location {
+  curbside: boolean;
+  description: string;
+  distance: number;
+}
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.css']
 })
 
 export class HomeComponent {
+
+  // city: String
+  // selectedMaterial: String
+  // location: Location;
+
   city: String;
   selectedMaterial: String;
   locationName: any[];
   locations = [];
+
 
 
   
@@ -37,5 +50,10 @@ export class HomeComponent {
       })
     })
   }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+  }
+
 
 }

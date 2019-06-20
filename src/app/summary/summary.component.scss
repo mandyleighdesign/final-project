@@ -9,7 +9,7 @@
     }
     .summary-section {
       .heading {
-        color: #ffffff;
+        color: black;
         font-size: 1.75em;
         line-height: 1.5;
         letter-spacing: 0.1em;
@@ -17,6 +17,8 @@
       }
       p {
         margin: 0 0 2em 0;
+        color:black;
+        font-size: 15px;
       }
       ul.actions {
         cursor: default;
@@ -67,5 +69,8 @@
       color: rgba(255, 255, 255, 0.75);
       padding: 4.5em 5em 2.5em 5em;
       border-radius: 1em;
+    }
+    .special:hover {
+      font-size: 150%;
     }
   }

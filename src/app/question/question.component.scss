@@ -1,24 +1,77 @@
 .question-body {
-    h5.title {
-      line-height: 4.0;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin: 0 0 0.65em 0;
-      font-weight: 500;
-      font-size: 1.75em;
+  h5.title {
+    line-height: 2.0;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 100px 0 0.65em 0;
+    font-weight: 500;
+    font-size: 1.00em;
+    
+  }
+  .choices {
+    padding: 1rem;
+   
+  }
+
+  .choice {
+    cursor: pointer;
+    
+  }
+  li {
+    height: 50px;
+   
+  }
+  .deleteQuiz {
+    color:black;
+    position: relative;
+    top:.2em;
+    bottom: .85em;
+
+    #delete {
+      position: absolute;
+      left: 46.0em;
       
     }
-    .choices {
-      padding: 1rem;
-     
+}
+
+}
+
+  @media only screen and (min-width: 768px) {
+    .question-body {
+      h5.title {
+        line-height: 2.0;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin: 100px 0 0.65em 0;
+        font-weight: 500;
+        font-size: 1.00em;
+        
+      }
+      .choices {
+        padding: 1rem;
+       
+      }
+    
+      .choice {
+        cursor: pointer;
+        
+      }
+      li {
+        height: 50px;
+       
+      }
+      .deleteQuiz {
+        color:black;
+        position: relative;
+        top:.2em;
+        bottom: .85em;
+  
+        #delete {
+          position: absolute;
+          left: 46.0em;
+          
+        }
     }
   
-    .choice {
-      cursor: pointer;
-      
-    }
-    li {
-      height: 50px;
-     
     }
   }

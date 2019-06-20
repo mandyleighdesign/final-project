@@ -9,7 +9,10 @@ import { DataService } from './data.service';
 })
 export class AppComponent implements OnInit {
   title = 'final-project';
-  users: User[];
+
+ 
+  users$: User[];
+
 
   constructor(private dataService: DataService) {
   }
@@ -17,4 +20,5 @@ export class AppComponent implements OnInit {
   ngOnInit() { 
     // return this.dataService.getUsers().subscribe(data => this.users = data); 
   }
+
 }

@@ -1,14 +1,18 @@
-<p>RETHINK THE </p>
-   
-<p>FUTURE</p>
 
-<p>Find A Recycling Center Near You</p> 
 
-    
+  
+
+<h2 id="rethink">RETHINK THE </h2>
+<h1 id="future">FUTURE</h1>
+
+<h3>Find A Recycling Center Near You</h3> 
+
+
+
 <div class="search-form">
     <form (submit)="findMaterials()">
-        <h3>City</h3>
-        <input required name="city" [(ngModel)]="city" />
+        
+        <input required name="city" placeholder="Enter City Here" [(ngModel)]="city" />
         <!-- <h3>Material</h3>
         <select required name="selectedMaterial" [(ngModel)]="selectedMaterial">
             <option value="bottles">bottles</option>
@@ -19,8 +23,18 @@
         <br>
         <button>Find Locations</button>
     </form>
-    <p></p>
+    <!-- <p></p> -->
+ 
     <div *ngFor="let location of locations">
         <p>{{ location.description }}</p>
-    </div>
+        <p> Curbside: {{ location.curbside }}</p>
+        <p> Distance: {{ location.distance }} </p>
+        
 </div>
+
+
+
+
+
+
+

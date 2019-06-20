@@ -1,8 +1,12 @@
-<div class="question-body">
+
+<div class="question-body" *ngIf="show">
+    <div class="deleteQuiz">
+        <i id='delete' (click)="removeTask(quiz)" class="fas fa-times" *ngIf="show === true"></i>
+      </div>
   <h5 class="title text-center">
     {{question.title}}
   </h5>
-
+  
   <div class="choices">
     <div class="container-fluid">
       <div class="row" *ngIf="question.drawType == 'card'; else drawList">
