@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from './user.model';
+import { Location } from './location.model';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -10,7 +10,7 @@ export class DataService {
 
   constructor(private _http: HttpClient) { }
 
-  baseApiUrl = "https://api.earth911.com/earth911.searchLocations";
+  baseApiUrl = "https://api.earth911.com/earth911";
   apiKey = "6b3a1bd08e2cb59e";
 
   //google location search
@@ -21,8 +21,13 @@ export class DataService {
 
   //earth 911
 
-  getUsers({lat, lng}) {
-    return this._http.get<User[]>(`${this.baseApiUrl}?api_key=${this.apiKey}&latitude=${lat}&longitude=${lng}`);
+  getLocations({lat, lng}) {
+    return this._http.get<Location[]>(`${this.baseApiUrl}.searchLocations?api_key=${this.apiKey}&latitude=${lat}&longitude=${lng}&max_results=10`);
+  }
+
+  getLocation(locationId) {
+    return this._http.get(`${this.baseApiUrl}.getLocationDetails?api_key=${this.apiKey}&location_id=${locationId}`);
   }
 
 }
+

@@ -25,17 +25,23 @@ button {
     
 
 select, button, input {
+<<<<<<< HEAD
+    border-radius: 10px;
+    margin-bottom:2em;
+=======
 
     border-radius: 5px;
 
     border-radius: 10px;
     margin-bottom:2em;
 
+>>>>>>> 12174f2584ac2a73ba0dcdf802bb9c44fab1ea6f
     width: 200px;
     height: 30px;
     border: none;
     padding-left: 15px;
     display: flex; 
+    color:black;
     /* flex-direction: column; */
 
 }

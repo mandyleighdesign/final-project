@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from './user.model';
+import { Location } from './location.model';
 import { DataService } from './data.service';
 
 @Component({
@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'final-project';
 
  
-  users$: User[];
+  locations$: Location[];
 
 
   constructor(private dataService: DataService) {
