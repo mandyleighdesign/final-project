@@ -31,12 +31,6 @@ body {
 	line-height: 1;
 }
 
-
-
-
-
-
-
 body {
     background-color: black;
     color: black;
@@ -58,7 +52,9 @@ body {
     
     .icon-next, .icon-prev {
       height: 300px;
-      width: 30px;
+      width: 20px;
+      font-size:20em;
+      height:10px;
       cursor: pointer;
       opacity: .5;
       
@@ -66,6 +62,7 @@ body {
     .icon-next {
       margin-left:-35px;
     }
+
     .icon-prev {
       margin-left:-30px;
     }
@@ -79,32 +76,31 @@ body {
     }
     .icon-next {
       right:-400em;
-          }
-          .icon-prev {
+    }
+    .icon-prev {
       left:9;
-          }
+    }
   
   /* .carousel.slide {
     right: 20.0rem;
    
   } */
-    .active {
-      width: 100%;
-    }
+  .active {
+    width: 100%;
+  }
   
   
   .carousel-indicators {
     display: none;
     bottom: -3rem;
   }
-    li {
-      height: 20px;
-      border-radius: 10px;
+  li {
+    height: 20px;
+    border-radius: 10px;
+  }
+  .active {
+    background-color: rgba(255, 255, 255, 0.75);
     }
-      .active {
-        background-color: rgba(255, 255, 255, 0.75);
-        
-      }
     
       @media only screen and (min-width: 768px) {
       .icon-prev,.icon-next {
@@ -113,5 +109,41 @@ body {
         left: 5%!important;
         top:30%!important;
       }
+      .left {
+        transform: translateX(-15rem);
+      }
+    
+      .right {
+        transform: translateX(9rem); 
+           
+      }
+      
+      .icon-next, .icon-prev {
+        height: 300px;
+        width: 30px;
+        cursor: pointer;
+        opacity: .5;
+        
+      }
+      .icon-next {
+        margin-left:-35px;
+      }
+      .icon-prev {
+        margin-left:-30px;
+      }
+      /* .carousel-control-prev {
+        margin-left: 20em!important;
+      } */
+  
+      .carousel-control-next {
+        margin-left: 20em!important;
+        width: 3%;
+      }
+      .icon-next {
+        right:-400em;
+            }
+            .icon-prev {
+        left:9;
+            }
     }
    
