@@ -54,7 +54,20 @@
     .question-count {
       float: left;
     }
+    .deleteQuiz {
+      color:black;
+      position: relative;
+      top:.2em;
+      bottom: .85em;
+      z-index:1999;
   
+      #delete {
+        position: absolute;
+        left: 47.0em;
+        top: 110px;
+        
+      }
+    }
   
   .carousel-indicators {
     display: block;

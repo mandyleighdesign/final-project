@@ -8,10 +8,13 @@
   <div class="row">
     <div class="col-md-2 col-xs-2"></div>
     <div class="col-md-8 col-xs-10">
+        <div class="deleteQuiz">
+            <i id='delete' (click)="removeTask(quiz)" class="fas fa-times" *ngIf="show === true"></i>
+          </div>
       
        
-      <!--To be used for Embeding-->
-      <carousel [interval]="-1" [(activeSlide)]="activeSlideIndex" *ngIf="!showSummary">
+      
+      <carousel  [interval]="-1" [(activeSlide)]="activeSlideIndex" *ngIf="!showSummary && show">
         <slide *ngFor="let question of questions; let i = index">
           <bq-question
             class="group"
