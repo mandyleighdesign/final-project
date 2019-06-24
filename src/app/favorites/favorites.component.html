@@ -1,3 +1,9 @@
-<p>
-  favorites works!
-</p>
+<div class="search-form">
+<div class= "results" *ngFor="let loc of locations; let i=index">
+    
+  <a href="{{ loc.url }}"><p id= "location">{{ loc.description }}</p></a>
+  <p> Address: {{ loc.address }} {{ loc.city }}</p>
+  <!-- <p id= "distance"> Distance: {{ globalLocations[i].distance }} </p> -->
+  <i id="ui" (click)="toggleFavorite(loc.location_id)" i class='fas fa-heart {{ isFavorited(loc.location_id) ? "fa-heart-red" : "" }}'></i>
+</div>  
+</div>

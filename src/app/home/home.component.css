@@ -162,6 +162,14 @@ h3 {
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
+    .fa-heart:hover {
+      color: lightgreen;
+    }
+
+    .fa-heart-red {
+      color: red;
+    }
+
     @keyframes spin {
       to {
         transform: translateX(-50%);
@@ -204,6 +212,11 @@ h3 {
       /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
       background-size: cover;
     }
+
+    .fa-heart:hover {
+      color:lightgreen;
+    }
+
     @keyframes spin {
       to {
         transform: translateX(-50%);
