@@ -40,10 +40,15 @@ export interface Location {
 export class HomeComponent {
 
   city: String;
-  //selectedMaterial: String;
+  province: string;
+  postal_code: number;
+  hours: number;
+  phone: number;
+
   locations = [];
   storedLocations = [];
   selectedMaterial: string = "";
+
   constructor(private dataService: DataService) {
     //localStorage.favorites = localStorage.favorites || [];
   }
@@ -96,8 +101,4 @@ export class HomeComponent {
   //   el.scrollIntoView({behavior: 'smooth'});
   // }
 
-  //push locations 
-  //use filter, define functions that filter array
-  //use dropdown to change value and filter based off of value 
-  //remove google API
 } 
