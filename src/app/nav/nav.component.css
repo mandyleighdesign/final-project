@@ -64,6 +64,8 @@ p {
     background-color:black; 
     border:none;
     cursor:pointer;
+    /* display: inline;
+   margin-right: 5px; */
 }
 
 i {

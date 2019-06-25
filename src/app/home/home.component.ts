@@ -3,6 +3,28 @@ import { FavoritesComponent } from '../favorites/favorites.component'
 import { take } from 'rxjs/operators';
 import { DataService } from '../data.service';
 
+export const uniqueArray = a => a.filter(function(item, pos) {
+  return a.indexOf(item) == pos;
+})
+
+export const addFavorite = (locationId) => {
+  const favorites = (localStorage.favorites && JSON.parse(localStorage.favorites)) || [];
+
+  const newFav = uniqueArray(favorites.concat([locationId]));
+  localStorage.setItem("favorites", JSON.stringify(newFav));
+}
+
+export const removeFavorite = (locationId) => {
+  const favorites = (localStorage.favorites && JSON.parse(localStorage.favorites)) || [];
+  const newFav = uniqueArray(favorites.filter(curFav => curFav !== locationId));
+  localStorage.setItem("favorites", JSON.stringify(newFav));
+}
+
+export const isFavorited = (locationId) => {
+  const favorites = (localStorage.favorites && JSON.parse(localStorage.favorites)) || [];
+  return  favorites.includes(locationId) ? true : false;
+}
+
 export interface Location {
   curbside: boolean;
   description: string;
@@ -25,27 +47,22 @@ interface ApiData {
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   list: Location [];
   city: String;
-  //selectedMaterial: String;
+  province: string;
+  postal_code: number;
+  hours: number;
+  phone: number;
+
   locations = [];
   storedLocations = [];
   selectedMaterial: string = "";
-  favoritesList: any [];
-@Input() location: Location;
 
-  favorites: boolean = false;
-  constructor(private DataService: DataService) {}
+  
+  constructor(private dataService: DataService) {
+    //localStorage.favorites = localStorage.favorites || [];
 
-  ngOnInit() {
-    this.DataService.favoritesListArray.subscribe(list => this.favoritesList = list);
-  }
-
-  favoritesListThis = () => {
-    this.favorites = !this.favorites;
-    this.favoritesList.push(this.location);
-    this.DataService.addLocation(this.favoritesList)
   }
 
   // getMaterials()
@@ -56,17 +73,20 @@ export class HomeComponent implements OnInit {
 
 
   findMaterials() {
-    this.DataService.getCoordinates(this.city).subscribe(locationData => {
+    this.dataService.getCoordinates(this.city).subscribe(locationData => {
       const latLng = locationData['results'][0].geometry.location;
+      const materialIds = this.selectedMaterial.split(',').map(cur => parseInt(cur, 10));
       console.log(latLng);
-      this.DataService.getLocations(latLng).subscribe((res: any) => {
+
+      this.dataService.getLocations(latLng, materialIds).subscribe((res: any) => {
         this.storedLocations = res.result;
         console.log("the global", this.storedLocations);
         this.locations = [];
         res.result.forEach(location => {
-          this.DataService.getLocation(location.location_id).subscribe((res: any) => {
+          this.dataService.getLocation(location.location_id).subscribe((res: any) => {
             console.log(res.result)
-            this.locations.push(res.result[location.location_id]);
+            const locationObj = Object.assign(res.result[location.location_id], { location_id: location.location_id });
+            this.locations.push(locationObj);
           })
           
         })
@@ -75,12 +95,23 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  addFavorite(locationId) {
+   addFavorite(locationId)
+  }
+
+  removeFavorite(locationId) {
+    removeFavorite(locationId)
+  }
+
+  isFavorited(locationId) {  
+   return isFavorited(locationId);
+  }
+
+  toggleFavorite(locationId) {
+    this.isFavorited(locationId) ? this.removeFavorite(locationId) : this.addFavorite(locationId);
+  }
   // scroll(el: HTMLElement) {
   //   el.scrollIntoView({behavior: 'smooth'});
   // }
 
-  //push locations 
-  //use filter, define functions that filter array
-  //use dropdown to change value and filter based off of value 
-  //remove google API
 } 
