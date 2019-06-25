@@ -6,7 +6,9 @@
 <div class="search-form">
     <form (submit)="findMaterials()">
         
+
         <input required name="city" placeholder="Search by your location" [(ngModel)]="city" />
+
         <br>
         <p>Select a material:</p><select class="select" name="materials" [(ngModel)]="selectedMaterial" (change)="getMaterials()">
             <option value="445, 60, 449, 93, 455, 62, 454, 456, 63, 457">Plastic</option>

@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { DataService } from '../data.service';
+import { Component, Input, Output, OnInit } from '@angular/core';
+import { FavoritesComponent } from '../favorites/favorites.component'
 import { take } from 'rxjs/operators';
+import { DataService } from '../data.service';
 
 export const uniqueArray = a => a.filter(function(item, pos) {
   return a.indexOf(item) == pos;
@@ -28,8 +29,17 @@ export interface Location {
   curbside: boolean;
   description: string;
   distance: number;
+  address: string;
+  city: string;
+  province: string;
+  postal_code: number;
+  hours: number;
+  phone: number;
 }
 
+interface ApiData {
+  results: Location[]
+}
 
 @Component({
   selector: 'app-home',
@@ -38,7 +48,7 @@ export interface Location {
 })
 
 export class HomeComponent {
-
+  list: Location [];
   city: String;
   province: string;
   postal_code: number;
@@ -49,8 +59,10 @@ export class HomeComponent {
   storedLocations = [];
   selectedMaterial: string = "";
 
+  
   constructor(private dataService: DataService) {
     //localStorage.favorites = localStorage.favorites || [];
+
   }
 
   // getMaterials()
@@ -65,6 +77,7 @@ export class HomeComponent {
       const latLng = locationData['results'][0].geometry.location;
       const materialIds = this.selectedMaterial.split(',').map(cur => parseInt(cur, 10));
       console.log(latLng);
+
       this.dataService.getLocations(latLng, materialIds).subscribe((res: any) => {
         this.storedLocations = res.result;
         console.log("the global", this.storedLocations);

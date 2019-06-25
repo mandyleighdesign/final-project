@@ -231,4 +231,25 @@ i {
           margin-top: 10px;
           width: 100%;
       }
+
+      #location {
+        font-size: 23px;
+      }
+      
+      #distance {
+        color: lightblue;
+        padding-left: 430px; 
+      }
+      
+      #address, #details, #contact {
+        font-size: 15px;
+      }
+      
+      .results {
+        outline: lightgreen solid 3px;
+        padding: 10px;
+        width: 300px;
+        margin-top: 90px; 
+      }
+      
   }
