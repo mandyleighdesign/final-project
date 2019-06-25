@@ -55,7 +55,7 @@
             
             &.special {
               box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.1);
-              background-color: #79d1b8;
+              background-color: rgba(255, 255, 255, 0.75);
               // color: #ffffff !important;
             }
           }
@@ -63,8 +63,9 @@
       }
       width: 40%;
       margin: 0 auto;
-      background-color: #69c7ad;
+      background-color: rgba(255, 255, 255, 0.75);
       color: rgba(255, 255, 255, 0.75);
       padding: 4.5em 5em 2.5em 5em;
+      border-radius: 1em;
     }
   }

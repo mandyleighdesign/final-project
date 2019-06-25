@@ -1,36 +1,38 @@
-
-
-  
-
 <h2 id="rethink">RETHINK THE </h2>
 <h1 id="future">FUTURE</h1>
 
 <h3>Find A Recycling Center Near You</h3> 
 
-
-
 <div class="search-form">
     <form (submit)="findMaterials()">
         
-        <input required name="city" placeholder="Enter City Here" [(ngModel)]="city" />
- 
+
+        <input required name="city" placeholder="Search by your location" [(ngModel)]="city" />
+
         <br>
+        <p>Select A Material:</p><select class="select" name="materials" [(ngModel)]="selectedMaterial" (change)="getMaterials()">
+            <option value="1,2">Plastic</option>
+        </select>
+        
         <button>Find Locations</button>
     </form>
+
+
+
  
      
-    <div class= "results" *ngFor="let location of locations">
-        
-        <p id= "location">{{ location.description }}</p>
-        <p> Curbside: {{ location.curbside }}</p>
-        <p id= "distance"> Distance: {{ location.distance }} </p>
-        <i id="ui" (click)="addFavorite()" i class='fas fa-heart'></i>
-        
+    <div class= "results" *ngFor="let loc of locations; let i=index">
+    
+        <a href="{{ loc.url }}"><p id= "location">{{ loc.description }}</p></a>
+        <p id="address"> Address: {{ loc.address }} {{ loc.city }} {{ loc.province }} {{ loc.postal_code }}</p>
+        <p id="details">Hours: {{ loc.hours }}  </p>
+        <p id="contact">Phone: {{ loc.phone }} </p>
+        <div (click)="favoritesListThis()" *ngIf="!favorites" class="add" >
+                <i class='fas fa-heart'></i>
+                <a>Add To Favorites!</a>
+        </div>
+        <div *ngIf="favorites" class="added">
+            <a>Added To Favorites!</a>
+        </div>
+    </div>    
 </div>
-
-
-
-
-
-
-

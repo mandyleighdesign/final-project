@@ -1,3 +1,9 @@
-<p>
-  favorites works!
-</p>
+
+<div class= "results" *ngFor="let loc of locations; let i=index">
+    
+    <a href="{{ loc.url }}"><p id= "location">{{ loc.description }}</p></a>
+    <p id="address"> Address: {{ loc.address }} {{ loc.city }} {{ loc.province }} {{ loc.postal_code }}</p>
+    <p id="details">Hours: {{ loc.hours }}  </p>
+    <p id="contact">Phone: {{ loc.phone }} </p>
+
+    </div>
