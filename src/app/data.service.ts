@@ -22,7 +22,6 @@ export class DataService {
     return this._http.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyBftPuIY280Sz5nvoGn1zMJjFKZlxxwJZs`);
   }
 
-  //earth 911
 
   getLocations({lat, lng}, materialIds) {
     console.log(materialIds); 
