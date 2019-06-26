@@ -18,7 +18,8 @@
       p {
         margin: 1em 0 2em 0;
         color:black;
-        font-size: 18px;
+        font-size: 25px;
+        line-height:40px;
       }
       ul.actions {
         cursor: default;
@@ -185,4 +186,29 @@
       p {
         padding-bottom:1em;
       }
+  }
+
+  @media only screen and (max-width: 480px) { 
+    .summary-section {
+      .heading {
+        color: black;
+        font-size: 1.75em;
+        line-height: 1.5;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      p {
+        margin: 1em 0 2em 0;
+        color:black;
+        font-size: 25px;
+        line-height:40px;
+      }
+    }
+
+    #delete {
+      position: relative;
+      left: 45.0em;
+      top: 200px;
+      
+    }
   }

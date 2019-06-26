@@ -5,6 +5,7 @@
     cursor: pointer;
     border: none;
     border-radius: 5px;
+    display:flex;
     
     &:hover,
     &.active {
@@ -16,6 +17,7 @@
     }
     .card-body {
       .choice-image {
+        flex-direction: column;
         width: 100%;
         min-height: 200px;
         background: gray;
@@ -66,7 +68,7 @@
       cursor: pointer;
       border: none;
       border-radius: 5px;
-      
+      display:flex;
       &:hover,
       &.active {
         box-shadow: 0 0 20px #999;
@@ -77,6 +79,7 @@
       }
       .card-body {
         .choice-image {
+          flex-direction: row;
           width: 100%;
           min-height: 200px;
           background: gray;
@@ -121,6 +124,14 @@
 
   }
 
-  @media only screen and (min-width: 480px) { 
-
+  @media only screen and (max-width: 480px) { 
+    .card { 
+      display:flex;
+    
+    }
+    .card-body {
+      .choice-image {
+flex-direction:column;
+      }
+    }
   }

@@ -78,7 +78,7 @@ body {
       right:-400em;
     }
     .icon-prev {
-      left:9;
+      left:9em;
     }
   
   /* .carousel.slide {
@@ -147,3 +147,47 @@ body {
             }
     }
    
+    @media only screen and (max-width: 480px) { 
+      .icon-prev,.icon-next {
+        font-size:300px!important;
+        right: 100%!important;
+        left: 5%!important;
+        top:30%!important;
+      }
+      .left {
+        transform: translateX(-15rem);
+      }
+    
+      .right {
+        transform: translateX(9rem); 
+           
+      }
+      
+      .icon-next, .icon-prev {
+        height: 300px;
+        width: 30px;
+        cursor: pointer;
+        opacity: .5;
+        
+      }
+      .icon-next {
+        margin-left:-35px;
+      }
+      .icon-prev {
+        margin-left:-30px;
+      }
+      /* .carousel-control-prev {
+        margin-left: 20em!important;
+      } */
+  
+      .carousel-control-next {
+        margin-left: 20em!important;
+        width: 3%;
+      }
+      .icon-next {
+        right:-400em;
+            }
+            .icon-prev {
+        left:9;
+            }
+    }
