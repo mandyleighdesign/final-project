@@ -18,7 +18,7 @@
         margin-top: 2rem;
         justify-content: center;
         display: flex;
-       
+       padding-bottom: 1em;
         
       }
         li {
@@ -31,6 +31,7 @@
           font-size: 1.2rem;
           margin-left: 5px;
           margin-right: 5px;
+          padding-bottom: 1em;
           
           
           cursor: pointer;
@@ -62,11 +63,12 @@
       z-index:1999;
   
       #delete {
-        position: absolute;
-        left: 47.0em;
-        top: 110px;
+        position: relative;
+        left: 45.0em;
+        top: 170px;
         
       }
+      
     }
   
   .carousel-indicators {
@@ -93,6 +95,7 @@
           margin-top: 2rem;
           justify-content: center;
           display: flex;
+          padding-bottom: 1em;
          
           
         }
@@ -106,6 +109,7 @@
             font-size: 1.2rem;
             margin-left: 5px;
             margin-right: 5px;
+            padding-bottom: 1em;
             
             
             cursor: pointer;
@@ -134,4 +138,19 @@
     .carousel-indicators {
       display: block;
     }
+    .deleteQuiz {
+      color:black;
+      position: relative;
+      top:.2em;
+      bottom: .85em;
+      z-index:1999;
+    }
+      #delete {
+        position: relative;
+        left: 45.0em;
+        top: 170px;
+        
+      }
+   
   }
+

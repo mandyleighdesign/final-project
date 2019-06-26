@@ -16,9 +16,9 @@
         text-transform: uppercase;
       }
       p {
-        margin: 0 0 2em 0;
+        margin: 1em 0 2em 0;
         color:black;
-        font-size: 15px;
+        font-size: 18px;
       }
       ul.actions {
         cursor: default;
@@ -63,7 +63,8 @@
           }
         }
       }
-      width: 40%;
+      width: 50%;
+      height:50%;
       margin: 0 auto;
       background-color: rgba(255, 255, 255, 0.75);
       color: rgba(255, 255, 255, 0.75);
@@ -82,9 +83,9 @@
     z-index:1999;
 
     #delete {
-      position: absolute;
+      position: relative;
       left: 47.0em;
-      top: 110px;
+      top: 200px;
       
     }
   }
@@ -108,9 +109,9 @@
           text-transform: uppercase;
         }
         p {
-          margin: 0 0 2em 0;
+          padding:1em 0 2em 0;
           color:black;
-          font-size: 15px;
+          font-size: 18px;
         }
         ul.actions {
           cursor: default;
@@ -155,7 +156,8 @@
             }
           }
         }
-        width: 40%;
+        width: 50%;
+        height:50%;
         margin: 0 auto;
         background-color: rgba(255, 255, 255, 0.75);
         color: rgba(255, 255, 255, 0.75);
@@ -166,18 +168,21 @@
         font-size: 150%;
       }
     }
-    .deleteQuiz {
-      color:black;
-      position: relative;
-      top:.2em;
-      bottom: .85em;
-      z-index:1999;
-  
+
+    // .deleteQuiz {
+    //   color:black;
+    //   position: relative;
+    //   top:.2em;
+    //   bottom: .85em;
+    //   // z-index:1999;
+    // }
       #delete {
-        position: absolute;
-        left: 47.0em;
-        top: 110px;
+        position: relative;
+        left: 45.0em;
+        top: 200px;
         
       }
-    }
+      p {
+        padding-bottom:1em;
+      }
   }
