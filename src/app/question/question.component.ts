@@ -45,12 +45,14 @@ export class QuestionComponent implements OnInit {
   public animatePage = true;
 
   constructor() { }
-
+show:boolean=true;
   ngOnInit() {
   }
 
   onClicked(index) {
     this.selectedChoice.emit(index);
   }
-
+  removeTask = (quiz) => {
+    this.show = !this.show;
+  }
 }
