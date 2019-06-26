@@ -60,17 +60,7 @@ export class HomeComponent {
   selectedMaterial: string = "";
 
   
-  constructor(private dataService: DataService) {
-    //localStorage.favorites = localStorage.favorites || [];
-
-  }
-
-  // getMaterials()
-  // {
-  //  let data = this.locations.map(x => {return Object.values(x)[0] as any});
-  //  console.log ("filtered materials are",data.filter(x => x.materials.filter(y=> {y.description.includes(this.selectedMaterial)})));
-  // }
-
+  constructor(private dataService: DataService) { }
 
   findMaterials() {
     this.dataService.getCoordinates(this.city).subscribe(locationData => {
@@ -88,9 +78,7 @@ export class HomeComponent {
             const locationObj = Object.assign(res.result[location.location_id], { location_id: location.location_id });
             this.locations.push(locationObj);
           })
-          
         })
-        // console.log("the locations are",this.locations, "the global location are ", this.globalLocations);
       })
     })
   }
@@ -110,8 +98,5 @@ export class HomeComponent {
   toggleFavorite(locationId) {
     this.isFavorited(locationId) ? this.removeFavorite(locationId) : this.addFavorite(locationId);
   }
-  // scroll(el: HTMLElement) {
-  //   el.scrollIntoView({behavior: 'smooth'});
-  // }
 
 } 

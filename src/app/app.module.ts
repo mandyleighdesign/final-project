@@ -27,7 +27,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const appRoutes: Routes = [
-
   {path: '', component: HomeComponent, pathMatch: 'full' },
   {path: 'favorites', component: FavoritesComponent, pathMatch: 'full' },
   {path: 'quiz', component: QuizComponent}

@@ -1,11 +1,11 @@
 <div class="search-form">
-<div class= "results" *ngFor="let loc of locations; let i=index">
-    
-  <a href="{{ loc.url }}"><p id= "location">{{ loc.description }}</p></a>
-  <p id="address"> Address: {{ loc.address }} {{ loc.city }} {{ loc.province }} {{ loc.postal_code }}</p>
-        <p id="details">Hours: {{ loc.hours }}  </p>
-        <p id="contact">Phone: {{ loc.phone }} </p>
-  <!-- <p id= "distance"> Distance: {{ globalLocations[i].distance }} </p> -->
-  <i id="ui" (click)="toggleFavorite(loc.location_id)" i class='fas fa-heart {{ isFavorited(loc.location_id) ? "fa-heart-red" : "" }}'></i>
-</div>  
+  <div class= "results" *ngFor="let loc of locations; let i=index">
+      
+    <a href="{{ loc.url }}"><p id= "location">{{ loc.description }}</p></a>
+    <p id="address"> Address: {{ loc.address }} {{ loc.city }} {{ loc.province }} {{ loc.postal_code }}</p>
+          <p id="details">Hours: {{ loc.hours }}  </p>
+          <p id="contact">Phone: {{ loc.phone }} </p>
+    <!-- <p id= "distance"> Distance: {{ globalLocations[i].distance }} </p> -->
+    <i id="ui" (click)="toggleFavorite(loc.location_id)" i class='fas fa-heart {{ isFavorited(loc.location_id) ? "fa-heart-red" : "" }}'></i>
+  </div>  
 </div>

@@ -1,5 +1,5 @@
 
-div , i{
+div , i {
   size:60px;
   padding-left: 560px;
   width: 30%;
@@ -14,10 +14,7 @@ button {
   background-color: lightblue;
 }
  
-
- 
 input {
-
     color:black;
     background-color: white;
     border-radius: 5px;
@@ -27,9 +24,7 @@ input {
     padding-left: 15px;
   }
 
-
-
-  input::placeholder { 
+input::placeholder { 
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
@@ -44,10 +39,12 @@ select, button, input {
     display: flex; 
 }
 
-input1 button {
+button {
   display: inline;
   border-radius: 5px;
-  
+  background-color: white;
+  color: #000;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .search-form {
@@ -57,6 +54,7 @@ input1 button {
     flex-direction: column;
     padding-left: 120px;
     margin: 20px 0px 40px;  
+    text-align:left;
 }
 
 #rethink {
@@ -89,7 +87,6 @@ input1 button {
 
 p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  max-width: 550px;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -98,53 +95,67 @@ p {
   
 }
 
+.selectTitle {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  display: block; 
+}
+
 #future {
-    font-size: 125px;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-left: 115px;
+  font-size: 125px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 115px;
 }
 
 h3 {
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
-    color: lightgreen;
-    padding-left: 120px;
-    width: 43%;   
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  color: lightgreen;
+  padding-left: 120px;
+  width: 43%;   
 }
 
 .container {
     display: inline-block;
     cursor: pointer;
-  }
-  .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  .change .bar2 {opacity: 0;}
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
+}
+  
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
 
-  #location {
-    font-size: 23px;
-  }
-  #distance {
-    color: lightblue;
-    padding-left: 430px; 
-  }
-  #address, #details, #contact {
-    font-size: 15px;
-  }
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#location {
+  font-size: 23px;
+}
+
+#distance {
+  color: lightblue;
+  padding-left: 430px; 
+}
+
+#address, #details, #contact {
+  font-size: 15px;
+}
   
 /* tablet, 768 and below */
   @media only screen and (min-width: 768px) {
@@ -187,21 +198,38 @@ h3 {
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
+    .results {
+      outline: lightgreen solid 3px;
+      padding: 10px;
+      width: 700px;
+      margin-top: 90px; 
+      position: relative;
+      text-align: left;
+    }
+  
+    .fa-heart {
+      position: absolute;
+      bottom: 10px;
+      right: 25px;
+    }
+
     .fa-heart:hover {
       color: lightgreen;
     }
 
     .fa-heart-red {
-      color: red;
+      color: lightgreen;
     }
 
     #location {
       font-size: 23px;
     }
+
     #distance {
       color: lightblue;
       padding-left: 430px; 
     }
+
     #address, #details, #contact {
       font-size: 15px;
     }
@@ -211,114 +239,115 @@ h3 {
       to {
         transform: translateX(-50%);
       }
-    }
-    
+    }  
   }
 
 /* desktop, applies only to 950 and above  */
 @media only screen and (min-width: 950px) {
-    .earth {
-      width: 500px;
-      height: 500px;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      right: 0;
-      margin: auto;
-      overflow: hidden;
-      border-radius: 50%;
-      box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
-    }
+  .earth {
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+  }
 
-    #location {
-      font-size: 23px;
-    }
-    #distance {
-      color: lightblue;
-      padding-left: 430px; 
-    }
-    #address, #details, #contact {
-      font-size: 15px;
-    }
-    
-    
-    .earth:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      box-shadow: -20px -20px 50px 2px #000 inset;
-      border-radius: 50%;
-    }
-    
-    .earth > div {
-      width: 200%;
-      height: 100%;
-      animation: spin 30s linear alternate infinite;
-      background: url(https://web.opendrive.com/api/v1/download/file/NDhfMjY5NTE1MTBfTEN6VHg);
-      /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
-      background-size: cover;
-    }
+  #location {
+    font-size: 23px;
+  }
 
-    .fa-heart:hover {
-      color:lightgreen;
-    }
+  #distance {
+    color: lightblue;
+    padding-left: 430px; 
+  }
+  
+  #address, #details, #contact {
+    font-size: 15px;
+  }
+  
+  
+  .earth:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -20px -20px 50px 2px #000 inset;
+    border-radius: 50%;
+  }
+  
+  .earth > div {
+    width: 200%;
+    height: 100%;
+    animation: spin 30s linear alternate infinite;
+    background: url(https://web.opendrive.com/api/v1/download/file/NDhfMjY5NTE1MTBfTEN6VHg);
+    /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
+    background-size: cover;
+  }
 
-    @keyframes spin {
-      to {
-        transform: translateX(-50%);
-      }
+  .fa-heart:hover {
+    color:lightgreen;
+  }
+
+  @keyframes spin {
+    to {
+      transform: translateX(-50%);
     }
   }
+}
 
 /* mobile, applies to only 480 or less  */
 
 @media only screen and (max-width: 480px) {
-    div p {
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    #location {
-      font-size: 23px;
-    }
-    #distance {
-      color: lightblue;
-      padding-left: 430px; 
-    }
-    #address, #details, #contact {
-      font-size: 15px;
-    }
-
-    #rethink {
-      color: white;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-size: 25px;
-      margin-top: 120px;
-      padding: 10px;
-      text-align: center;
-     
-    }
-
-    #future {
-      font-size: 73px;
-      color: white;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      padding: 10px;
-      text-align: center;
+  div p {
+      margin-top: 10px;
+      width: 100%;
   }
-  
+
+  #location {
+    font-size: 23px;
+  }
+  #distance {
+    color: lightblue;
+    padding-left: 430px; 
+  }
+  #address, #details, #contact {
+    font-size: 15px;
+  }
+
+  #rethink {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-top: 120px;
+    padding: 10px;
+    text-align: center;
+    
+  }
+
+  #future {
+    font-size: 73px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    text-align: center;
+  }
+
   h3 {
-      color: white;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-size: 20px;
-      color: lightgreen;
-      padding: 10px;
-      width: 100%;   
-      text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: lightgreen;
+    padding: 10px;
+    width: 100%;   
+    text-align: center;
   }
 
   .search-form {
@@ -326,26 +355,23 @@ h3 {
     color: #fff;
     display: flex; 
     flex-direction: column;
-    padding-left: 40px;
-    margin: 20px 0px 40px;  
-    display: inline-block;
-}
-  
-  input {
+    margin: auto;
+    align-items: center;
+    padding-left: 10px;
+  }
 
+  input {
     color:black;
     background-color: white;
     border-radius: 5px;
     width: 200px;
     height: 30px;
     border: none;
-  
   }
 
 
   input::placeholder { 
     color: black;
-    
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
@@ -367,11 +393,18 @@ input, button {
 
 p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
   font-size: 20px;
-  text-align: center;
-  width: 300px;
 
+}
+
+.selectTitle {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  display: block;
+  text-align: left;
 }
 
 #location {
@@ -392,9 +425,23 @@ p {
   padding: 10px;
   width: 300px;
   margin-top: 90px; 
- 
+  position: relative;
+  text-align: left;
 }
 
+.fa-heart {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+.fa-heart:hover {
+  color: lightgreen;
+}
+
+.fa-heart-red {
+  color: lightgreen;
+}
 
 
 }

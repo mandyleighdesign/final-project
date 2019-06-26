@@ -31,7 +31,7 @@ export class DataService {
       return acc + `&material_id=${cur}`;
     }, "");
     
-    return this._http.get<Location[]>(`${this.baseApiUrl}.searchLocations?api_key=${this.apiKey}&latitude=${lat}&longitude=${lng}${materialIdsParam}`);
+    return this._http.get<Location[]>(`${this.baseApiUrl}.searchLocations?api_key=${this.apiKey}&max_distance=3000&latitude=${lat}&longitude=${lng}${materialIdsParam}`);
   }
 
   getLocation(locationId) {
