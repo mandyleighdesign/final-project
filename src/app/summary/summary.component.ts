@@ -31,11 +31,17 @@ import {
     ])
   ]
 })
+
 export class SummaryComponent implements OnInit {
   @Input() summary: string;
   @Output() resetQuiz = new EventEmitter();
+  show = true;
 
-  constructor() { }
+
+  constructor() {}
+ 
+  removeTask = () => this.show = !this.show;
+
 
   ngOnInit() {
   }
