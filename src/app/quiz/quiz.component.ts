@@ -53,10 +53,11 @@ export class QuizComponent {
   showSummary = false;
   option = false;
   activeSlideIndex = 0;
+  show = true;
 
   constructor() {
   }
-
+  removeTask = () => this.show = !this.show;
   onSelected(questionIdx, choiceIdx) {
     this.summary[questionIdx] =
       this.questions[questionIdx].choices[choiceIdx].summary;

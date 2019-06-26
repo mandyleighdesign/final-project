@@ -1,11 +1,12 @@
 .option {
-  float: right;
-  margin-right: 10px;
-  
+  // float: right;
+  // margin-right: 100px;
+  display:flex;
+  justify-content: center;
 }
 .container-fluid {
-  width: 80vw;
-  top: 4vh;
+  width: 100vw;
+  top: 10vh;
   
   carousel {
     width: 100%;
@@ -17,7 +18,7 @@
       margin-top: 2rem;
       justify-content: center;
       display: flex;
-     
+     padding-bottom: 1em;
       
     }
       li {
@@ -27,9 +28,11 @@
         background: white;
         border-radius: 40px;
         text-align: center;
+        padding-top:.4em;
         font-size: 1.2rem;
         margin-left: 5px;
         margin-right: 5px;
+        padding-bottom: 2em;
         
         
         cursor: pointer;
@@ -53,8 +56,101 @@
   .question-count {
     float: left;
   }
+  .deleteQuiz {
+    color:black;
+    position: relative;
+    top:.2em;
+    bottom: .85em;
+    z-index:1999;
 
+    #delete {
+      position: relative;
+      left: 45.0em;
+      top: 170px;
+      
+    }
+    
+  }
 
 .carousel-indicators {
   display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .option {
+    float: right;
+    margin-right: 10px;
+    
+  }
+  .container-fluid {
+    width: 80vw;
+    top: 4vh;
+    
+    carousel {
+      width: 100%;
+      height: 100%;
+      
+      
+    }
+      .list-inline {
+        margin-top: 2rem;
+        justify-content: center;
+        display: flex;
+        padding-bottom: 1em;
+       
+        
+      }
+        li {
+          display: inline-block;
+          width: 55px;
+          height: 60px;
+          background: white;
+          border-radius: 40px;
+          text-align: center;
+          font-size: 1.2rem;
+          margin-left: 5px;
+          margin-right: 5px;
+          padding-bottom: 1em;
+          
+          
+          cursor: pointer;
+          transition: all 0.3s;
+          
+          &.selected {
+            background: white;
+           
+          }
+          .choice-selected {
+            height: 80%;
+            object-fit: cover;
+            font:300px;
+            margin-bottom:2em;
+           
+          }
+        }
+      }
+    
+  
+    .question-count {
+      float: left;
+    }
+  
+  
+  .carousel-indicators {
+    display: block;
+  }
+  .deleteQuiz {
+    color:black;
+    position: relative;
+    top:.2em;
+    bottom: .85em;
+    z-index:1999;
+  }
+    #delete {
+      position: relative;
+      left: 45.0em;
+      top: 170px;
+      
+    }
+ 
 }
