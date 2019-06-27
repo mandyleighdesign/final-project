@@ -5,10 +5,10 @@
 
 <div class="search-form">
     <form (submit)="findMaterials()">
-    
-        <input required name="city" placeholder="Search by your location" [(ngModel)]="city" />
+        <span class="selectTitle">Enter your location</span>
+        <input required name="city" placeholder="Location" [(ngModel)]="city" />
 
-        <span class="selectTitle">Select a material:</span>
+        <span class="selectTitle">& select a material:</span>
         <select class="select" name="materials" [(ngModel)]="selectedMaterial" (change)="getMaterials()">
             <option value="445, 93, 456, 429, 464, 470, 477">Plastic Bags</option>
             <option value="60, 455, 63, 64, 65, 66, 67, 449">Plastic Bottles</option>
@@ -39,7 +39,7 @@
             <option value="83, 371">Clothing and Fabric</option>
         </select>
 
-        <button>Find Locations</button>
+        <button class="button">Submit Search</button>
     </form>
 
     <app-earth></app-earth>

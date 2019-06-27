@@ -12,13 +12,8 @@
               <i id='delete' (click)="removeTask(quiz)" class="fas fa-times" *ngIf="show === true" routerLink='/'></i>
             </div>
         
-<<<<<<< HEAD
-        
-        <carousel  [interval]="-1" [(activeSlide)]="activeSlideIndex" *ngIf="!showSummary && show" class="mommy">
-=======
          
         <carousel  [interval]="-1" [(activeSlide)]="activeSlideIndex" *ngIf="!showSummary && show">
->>>>>>> 12af5a8d7a648ef1d0ac8ab806b2a9a59db68de3
           <slide *ngFor="let question of questions; let i = index">
             <bq-question
               class="group"

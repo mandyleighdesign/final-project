@@ -124,6 +124,11 @@ h3 {
     display: inline-block;
     cursor: pointer;
 }
+
+.button {
+  background:  rgb(80, 245, 80);
+  color: #fff;
+}
   
 .bar1, .bar2, .bar3 {
   width: 35px;
@@ -195,7 +200,7 @@ h3 {
 
     .select {
       color: #000;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     .results {
@@ -219,6 +224,11 @@ h3 {
 
     .fa-heart-red {
       color: lightgreen;
+    }
+
+    .button {
+      background:  rgb(80, 245, 80);
+      color: #fff;
     }
 
     #location {
@@ -341,7 +351,7 @@ h3 {
 
   h3 {
     color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     color: lightgreen;
     padding: 10px;
@@ -381,6 +391,11 @@ select, button, input {
     height: 40px;
     border: none;
   
+}
+
+.button {
+  background:  rgb(80, 245, 80);
+  color: #fff;
 }
 
 input, button {
