@@ -37,4 +37,3 @@ export class ChoiceComponent implements OnInit {
 
 // Use an Input decorator to make the following instance variable available to parent components to pass data down.
 // @Input() choice: Choice;
-

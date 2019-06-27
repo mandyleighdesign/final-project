@@ -6,8 +6,12 @@
   button {
     margin-bottom: 1rem;
     cursor: pointer;
+    
+      display:relative;
+    
   }
   .summary-section {
+    
     .heading {
       color: black;
       font-size: 1.75em;
@@ -15,6 +19,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
     }
+   
     p {
       margin: 1em 0 2em 0;
       color:black;
@@ -76,21 +81,33 @@
     font-size: 150%;
   }
 }
-.deleteQuiz {
-  color:black;
-  position: relative;
-  top:.2em;
-  bottom: .85em;
-  z-index:1999;
+// .deleteQuiz {
+//   color:black;
+//   position: relative;
+//   top:.2em;
+//   bottom: .85em;
+//   z-index:1999;
 
-  #delete {
-    position: relative;
-    left: 47.0em;
-    top: 200px;
+//   #delete {
+//     position: relative;
+//     left: 47.0em;
+//     top: 13em;
     
-  }
-}
+//   }
 
+  .deleteQuiz {
+    // color:black;
+    // position: relative;
+    // top:.2em;
+    bottom: .85em;
+    z-index:1999;
+
+//     #delete {
+//       position: absolute;
+//       left: 43.0em;
+//       top: 200px;
+// }
+  }
 @media only screen and (min-width: 768px) {
   .summary {
     top: 20%;
@@ -169,7 +186,13 @@
       font-size: 150%;
     }
   }
-
+  .deleteQuiz {
+    color:black;
+    position: absolute;
+    top: 50px;
+    // right:30px;
+    // height:20px;
+  }
   // .deleteQuiz {
   //   color:black;
   //   position: relative;
@@ -177,15 +200,27 @@
   //   bottom: .85em;
   //   // z-index:1999;
   // }
-    #delete {
-      position: relative;
-      left: 45.0em;
-      top: 200px;
+    // #delete {
+    //   position: relative;
+    //   left: 45.0em;
+    //   top: 13em;
       
-    }
+    // }
     p {
       padding-bottom:1em;
     }
+    // .deleteQuiz {
+      // color:black;
+      // position: relative;
+      // top:.2em;
+    //   bottom: .85em;
+    //   z-index:1999;
+    // }
+  //     #delete {
+  //       position: absolute;
+  //       left: 43.0em;
+  //       top: 200px;
+  // }
 }
 
 @media only screen and (max-width: 480px) { 
@@ -205,10 +240,25 @@
     }
   }
 
-  #delete {
-    position: relative;
-    left: 45.0em;
-    top: 200px;
+  // #delete {
+  //   position: relative;
+  //   left: 45.0em;
+  //   top: 13em;
     
-  }
+  // }
+
+
+  // .deleteQuiz {
+  //   color:black;
+  //   position: relative;
+  //   top:.2em;
+  //   bottom: .85em;
+  //   z-index:1999;
+
+  //   #delete {
+  //     position: absolute;
+  //     left: 43.0em;
+  //     top: 200px;
+  //   }
+  // }
 }
