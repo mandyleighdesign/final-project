@@ -4,9 +4,23 @@
   display:flex;
   justify-content: center;
 }
+
+.row {
+  width: 100%;
+  margin-left:250px;
+  // position: relative;
+}
+
+.quizContainer {
+  display: flex;
+  margin: auto;
+  margin-left: 50px;
+}
+
 .container-fluid {
   width: 100vw;
   top: 10vh;
+  position: relative;
   
   carousel {
     width: 100%;
@@ -57,19 +71,25 @@
     float: left;
   }
   .deleteQuiz {
-    color:black;
-    position: relative;
-    top:.2em;
+    // color:black;
+    // top:.2em;
+    // right: 43.0em;
     bottom: .85em;
     z-index:1999;
 
-    #delete {
-      position: relative;
-      left: 45.0em;
-      top: 170px;
+    // #delete {
+    //   position: absolute;
+    //   // top: 10px;
+    //   // left: 10px;
+    //   left: 60.0em;
+    //   top: 110px;
       
-    }
+    // }
     
+  }
+
+  .col-md-40, .col-xs-40 {
+    position:relative;
   }
 
 .carousel-indicators {
@@ -82,9 +102,16 @@
     margin-right: 10px;
     
   }
+
+  .quizContainer {
+    margin-left: 50px;
+  }
+
+
   .container-fluid {
     width: 80vw;
     top: 4vh;
+    // position: relative;
     
     carousel {
       width: 100%;
@@ -100,6 +127,14 @@
        
         
       }
+
+
+      .row {
+        width: 70%;
+        margin-left:200px;
+        // position: relative;
+      }
+
         li {
           display: inline-block;
           width: 55px;
@@ -141,16 +176,31 @@
   }
   .deleteQuiz {
     color:black;
-    position: relative;
-    top:.2em;
-    bottom: .85em;
-    z-index:1999;
+    position: absolute;
+    top: 129px;
+    right:30px;
+    height:20px;
   }
-    #delete {
-      position: relative;
-      left: 45.0em;
-      top: 170px;
-      
-    }
- 
+    // #delete { 
+    //  top: 10px;
+    //  left: 10px;
+    // }
+    // .mommy {
+    //   position: relative;
+    // }
+    // .deleteQuiz {
+    //   color:black;
+    //   top:.2em;
+    //   right: 43.0em;
+    //   bottom: .85em;
+    //   z-index:1999;
+    // }
+    //   #delete {
+    //     position: absolute;
+    //     // top: 10px;
+    //     // left: 10px;
+    //     left: 60.0em;
+    //     top: 110px;
+        
+    //   }
 }

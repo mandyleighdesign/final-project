@@ -5,7 +5,7 @@
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  display:flex;
+
   
   &:hover,
   &.active {
@@ -17,6 +17,7 @@
   }
   .card-body {
     .choice-image {
+      display:flex;
       flex-direction: column;
       width: 100%;
       min-height: 200px;
@@ -27,7 +28,7 @@
     }
     .choice-title {
       padding-top: 1rem;
-      font-size: 1.9rem;
+      font-size: 1rem!important;
      
     }
     .choice-select {
