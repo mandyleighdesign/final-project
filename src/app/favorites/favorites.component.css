@@ -247,9 +247,33 @@ i {
       
       .results {
         outline: lightgreen solid 3px;
-        padding: 10px;
-        width: 300px;
+        padding-right: 20px;
+        width: 100%;
         margin-top: 90px; 
+        position: relative;
+        text-align: left;
       }
+
+      .fa-heart {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+      }
+      .fa-heart:hover {
+        color: lightgreen;
+      }
+
+      .fa-heart-red {
+        color: red;
+      }
+
+      .search-form {
+        background: #000;
+        color: #fff;
+        display: flex; 
+        flex-direction: column;
+        padding-left: 2px;
+        margin: 10px;
+    }
       
   }

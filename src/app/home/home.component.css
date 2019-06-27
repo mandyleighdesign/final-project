@@ -15,6 +15,16 @@ button {
 }
  
 
+.selectTitle {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  display: block;
+  text-align: left;
+ 
+ }
  
 input {
 
@@ -42,6 +52,10 @@ select, button, input {
     border: none;
     padding-left: 15px;
     display: flex; 
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+
 }
 
 input1 button {
@@ -147,41 +161,148 @@ h3 {
   }
   
 /* tablet, 768 and below */
-  @media only screen and (min-width: 768px) {
-    .earth {
-      width: 500px;
-      height: 500px;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      right: 0;
-      margin: auto;
-      overflow: hidden;
-      border-radius: 50%;
-      box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
-    }
-    
-    .earth:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      box-shadow: -20px -20px 50px 2px #000 inset;
-      border-radius: 50%;
-    }
-    
-    .earth > div {
-      width: 200%;
-      height: 100%;
-      animation: spin 30s linear alternate infinite;
-      background: url(https://web.opendrive.com/api/v1/download/file/NDhfMjY5NTE1MTBfTEN6VHg);
-      /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
-      background-size: cover;
-    }
+  @media only screen and (max-width: 768px) {
 
+
+    div p {
+      margin-top: 10px;
+      width: 100%;
+  }
+
+  #location {
+    font-size: 23px;
+  }
+  #distance {
+    color: lightblue;
+    padding-left: 430px; 
+  }
+  #address, #details, #contact {
+    font-size: 15px;
+  }
+
+  #rethink {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    margin-top: 160px;
+    padding: 10px;
+    text-align: center;
+   
+  }
+
+  #future {
+    font-size: 150px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: lightgreen;
+    padding: 10px;
+    width: 100%;   
+    text-align: center;
+}
+
+.search-form {
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  padding-left: 10px;
+}
+
+
+
+
+input::placeholder { 
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+select, button, input {
+  border-radius: 5px;
+  /* margin-bottom:3em; */
+  width: 550px;
+  height: 50px;
+  border: none;
+  margin-top: 1em;
+
+}
+
+input, button {
+display: inline;
+border-radius: 5px;
+
+
+}
+
+p {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+font-size: 20px;
+text-align: center;
+width: 300px;
+
+}
+
+#location {
+font-size: 23px;
+}
+
+#distance {
+color: lightblue;
+padding-left: 430px; 
+}
+
+#address, #details, #contact {
+font-size: 15px;
+}
+
+.results {
+outline: lightgreen solid 3px;
+padding: 10px;
+width: 550px;
+margin-top: 90px; 
+position: relative;
+text-align: left;
+}
+
+.selectTitle {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin: 10px;
+display: flex;
+flex-direction: column;
+font-size: 25px;
+display: block;
+text-align: left;
+}
+
+
+
+.fa-heart {
+position: absolute;
+bottom: 10px;
+right: 20px;
+}
+.fa-heart:hover {
+color: lightgreen;
+}
+
+.fa-heart-red {
+color: red;
+}
+
+
+
+    
+   
     .select {
       color: #000;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -207,29 +328,13 @@ h3 {
     }
     
 
-    @keyframes spin {
-      to {
-        transform: translateX(-50%);
-      }
-    }
+ 
     
   }
 
 /* desktop, applies only to 950 and above  */
 @media only screen and (min-width: 950px) {
-    .earth {
-      width: 500px;
-      height: 500px;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      right: 0;
-      margin: auto;
-      overflow: hidden;
-      border-radius: 50%;
-      box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
-    }
+
 
     #location {
       font-size: 23px;
@@ -243,35 +348,13 @@ h3 {
     }
     
     
-    .earth:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      box-shadow: -20px -20px 50px 2px #000 inset;
-      border-radius: 50%;
-    }
-    
-    .earth > div {
-      width: 200%;
-      height: 100%;
-      animation: spin 30s linear alternate infinite;
-      background: url(https://web.opendrive.com/api/v1/download/file/NDhfMjY5NTE1MTBfTEN6VHg);
-      /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
-      background-size: cover;
-    }
+   
 
     .fa-heart:hover {
       color:lightgreen;
     }
 
-    @keyframes spin {
-      to {
-        transform: translateX(-50%);
-      }
-    }
+ 
   }
 
 /* mobile, applies to only 480 or less  */
@@ -324,12 +407,12 @@ h3 {
   .search-form {
     background: #000;
     color: #fff;
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    padding-left: 40px;
-    margin: 20px 0px 40px;  
-    display: inline-block;
-}
+    margin: auto;
+    align-items: center;
+    padding-left: 10px;
+ }
   
   input {
 
@@ -392,9 +475,32 @@ p {
   padding: 10px;
   width: 300px;
   margin-top: 90px; 
- 
+  position: relative;
+  text-align: left;
 }
 
+.selectTitle {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  display: block;
+  text-align: left;
+ }
 
 
+
+.fa-heart {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+.fa-heart:hover {
+  color: lightgreen;
+}
+
+.fa-heart-red {
+  color: red;
+}
 }

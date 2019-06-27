@@ -1,19 +1,31 @@
 <nav class="navbar-span">
   <div class="section1">
 
+
+
     <a class="navbar-logo" (click)="onClick()" routerLink="\"><img class="logo" src="assets/logo.png" alt="logo"/></a>
+    <div class="dropdown">
+        <button class="dropbtn">menu</button>
+        <div class="dropdown-content">
+            <a href="#" routerLink='/'>Home</a>
+        <a href="#" routerLink='/favorites'> Favorites</a>
+        <a href="#" routerLink='/quiz'> Quiz</a>
+        </div>
+      </div>
     <div class="collapse navbar-collapse" id="navbarText">
-  
+     
     <form name="userIcons" id="userIcons">
+      
         <a id="ui" routerLink="/"><i id="fa-home" class='fas fa-home'></i></a><p>Home</p>
         <button id="ui" routerLink='/favorites'><i class='fas fa-heart'></i></button><p>Favorites</p>
         <button id="ui" routerLink='/quiz'> <i class="fas fa-check-circle"></i></button><p>Quiz</p>
        
         <!-- <button id="ui"><i class='fas fa-user-alt'></i></button> -->
-
-    
-
-      </form>
+</form>
+       
+     
+      </div>
     </div>
-  </div>
+    
+ 
 </nav>
