@@ -6,7 +6,7 @@
 }
 
 .row {
-  width: 70%;
+  width: 100%;
   margin-left:250px;
   // position: relative;
 }
@@ -111,6 +111,7 @@
   .container-fluid {
     width: 80vw;
     top: 4vh;
+    // position: relative;
     
     carousel {
       width: 100%;
@@ -173,14 +174,33 @@
   .carousel-indicators {
     display: block;
   }
-
-.row {
-  position: relative;
-}
   .deleteQuiz {
     color:black;
     position: absolute;
-    left: 10px;
-    top: 10px;
+    top: 129px;
+    right:30px;
+    height:20px;
   }
+    // #delete { 
+    //  top: 10px;
+    //  left: 10px;
+    // }
+    // .mommy {
+    //   position: relative;
+    // }
+    // .deleteQuiz {
+    //   color:black;
+    //   top:.2em;
+    //   right: 43.0em;
+    //   bottom: .85em;
+    //   z-index:1999;
+    // }
+    //   #delete {
+    //     position: absolute;
+    //     // top: 10px;
+    //     // left: 10px;
+    //     left: 60.0em;
+    //     top: 110px;
+        
+    //   }
 }

@@ -167,7 +167,7 @@ h3 {
     }
 
     .fa-heart-red {
-      color: red;
+      color: lightgreen;
     }
 
     @keyframes spin {
@@ -264,7 +264,7 @@ h3 {
     }
 
     .fa-heart-red {
-      color: red;
+      color: lightgreen;
     }
 
     .search-form {

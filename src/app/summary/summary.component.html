@@ -1,18 +1,18 @@
 <div class="summary text-center" [@flyInDown]="'in'">
-    <br>
-    <div class="summary-section">
-        <div class="deleteQuiz">
-            <i id='delete' (click)="removeTask(quiz)" class="fas fa-times" *ngIf="show === true" routerLink='/'></i>
-          </div>
-      <h1 class="heading">Summary</h1>
-      <p>{{summary}}</p>
-      <ul class="actions">
-        <li>
-          <a class="button special" (click)="reset()">Take Quiz again</a>
-        </li>
-  
-      </ul>
-    </div>
+  <br>
+  <div class="summary-section">
+      <div class="deleteQuiz">
+          <i id='delete' (click)="removeTask(quiz)" class="fas fa-times" *ngIf="show === true" routerLink='/'></i>
+        </div>
+    <h1 class="heading">Summary</h1>
+    <p>{{summary}}</p>
+    <ul class="actions">
+      <li>
+        <a class="button special" (click)="reset()">Take Quiz again</a>
+      </li>
+
+    </ul>
   </div>
-  
-  <!-- SUMMARY OF THE RESULTS -->
+</div>
+
+<!-- SUMMARY OF THE RESULTS -->
