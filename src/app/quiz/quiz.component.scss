@@ -85,6 +85,7 @@
   .container-fluid {
     width: 80vw;
     top: 4vh;
+
     
     carousel {
       width: 100%;
@@ -139,18 +140,14 @@
   .carousel-indicators {
     display: block;
   }
+
+.row {
+  position: relative;
+}
   .deleteQuiz {
     color:black;
-    position: relative;
-    top:.2em;
-    bottom: .85em;
-    z-index:1999;
+    position: absolute;
+    left: 10px;
+    top: 10px;
   }
-    #delete {
-      position: relative;
-      left: 45.0em;
-      top: 170px;
-      
-    }
- 
 }

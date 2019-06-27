@@ -115,7 +115,7 @@ h3 {
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 30px;
-  color: lightgreen;
+  color: rgb(80, 245, 80);
   padding-left: 120px;
   width: 43%;   
 }
@@ -158,8 +158,8 @@ h3 {
 }
   
 /* tablet, 768 and below */
-  @media only screen and (min-width: 768px) {
-    .earth {
+  @media only screen and (min-width: 750px) {
+    /* .earth {
       width: 500px;
       height: 500px;
       position: fixed;
@@ -183,15 +183,15 @@ h3 {
       box-shadow: -20px -20px 50px 2px #000 inset;
       border-radius: 50%;
     }
-    
-    .earth > div {
+     */
+    /* .earth > div {
       width: 200%;
       height: 100%;
       animation: spin 30s linear alternate infinite;
-      background: url(https://web.opendrive.com/api/v1/download/file/NDhfMjY5NTE1MTBfTEN6VHg);
+      background: url(https://web.opendrive.com/api/v1/download/file/NDhfMjY5NTE1MTBfTEN6VHg); */
       /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
-      background-size: cover;
-    }
+      /* background-size: cover;
+    } */
 
     .select {
       color: #000;
@@ -244,7 +244,7 @@ h3 {
 
 /* desktop, applies only to 950 and above  */
 @media only screen and (min-width: 950px) {
-  .earth {
+  /* .earth {
     width: 500px;
     height: 500px;
     position: fixed;
@@ -256,7 +256,7 @@ h3 {
     overflow: hidden;
     border-radius: 50%;
     box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
-  }
+  } */
 
   #location {
     font-size: 23px;
@@ -271,7 +271,7 @@ h3 {
     font-size: 15px;
   }
   
-  
+/*   
   .earth:after {
     position: absolute;
     content: "";
@@ -288,9 +288,8 @@ h3 {
     height: 100%;
     animation: spin 30s linear alternate infinite;
     background: url(https://web.opendrive.com/api/v1/download/file/NDhfMjY5NTE1MTBfTEN6VHg);
-    /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
     background-size: cover;
-  }
+  } */
 
   .fa-heart:hover {
     color:lightgreen;

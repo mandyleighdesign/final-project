@@ -5,7 +5,6 @@ import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
-
 })
 
 export class DataService {

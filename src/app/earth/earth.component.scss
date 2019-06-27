@@ -24,7 +24,7 @@
 }
 
   
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 850px) {
   .earth {
     width: 500px;
     height: 500px;
@@ -58,7 +58,6 @@
     /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
     background-size: cover;
   }
-  
   @keyframes spin {
     to {
       transform: translateX(-50%);
@@ -101,7 +100,6 @@
     /*orginal image at https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Earthmap1000x500compac.jpg/640px-Earthmap1000x500compac.jpg */
     background-size: cover;
   }
-
   @keyframes spin {
     to {
       transform: translateX(-50%);
